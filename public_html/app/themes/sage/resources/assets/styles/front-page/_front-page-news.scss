@@ -1,0 +1,104 @@
+.front-page__news {
+  @include container;
+
+  margin-top: 50px;
+
+  &-head {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+
+    &-info {
+      font-style: normal;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 24px;
+      text-decoration-line: underline;
+      color: $main;
+      width: 100%;
+
+      &:hover {
+        color: $light;
+      }
+
+      &-link {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+      }
+    }
+  }
+
+  &-title {
+    @include title;
+  }
+
+  &-list {
+    margin-top: 37px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+
+    &-item {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      width: calc((100% - 37px) / 2);
+      min-height: 250px;
+
+      &:first-child {
+        margin-right: 37px;
+      }
+
+      &-title {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 22px;
+        line-height: 24px;
+        color: $main;
+        max-width: 470px;
+        margin-bottom: 14px;
+
+        &:hover {
+          color: $light;
+        }
+      }
+
+      &-date {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 24px;
+        color: $light;
+      }
+
+      &-desc {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        color: $title;
+        margin-top: 12px;
+      }
+
+      &-link-more {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 24px;
+        text-decoration-line: underline;
+        color: $main;
+        margin-top: auto;
+
+        &:hover {
+          color: $light;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,329 @@
+.services-page {
+  @include container;
+
+  padding-top: 80px;
+
+  &__main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    margin-top: 60px;
+    margin-bottom: 60px;
+
+    &-info {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      width: 100%;
+      max-width: 806px;
+      margin-right: 37px;
+    }
+
+    &-heading {
+      @include title;
+
+      margin-bottom: 34px;
+    }
+
+    &-content {
+      h2 {
+        @include title;
+
+        margin-bottom: 21px;
+      }
+
+      h3 {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 24px;
+        margin-bottom: 21px;
+        color: $title;
+      }
+
+      p {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        margin-bottom: 15px;
+        color: $title;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        a:hover {
+          color: $main;
+        }
+      }
+
+      strong {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 123.49%;
+        color: $text;
+      }
+
+      em {
+        font-style: italic;
+      }
+
+      .text-emit {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 123.49%;
+        margin-bottom: 15px;
+        color: $title;
+      }
+
+      ul {
+        margin-top: 2px;
+        margin-bottom: 2px;
+
+        li {
+          position: relative;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 24px;
+          color: $title;
+          padding-left: 17px;
+          margin-bottom: 3px;
+
+          &::after {
+            position: absolute;
+            content: "";
+            top: 6px;
+            left: 0;
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background-color: $main;
+          }
+        }
+      }
+    }
+  }
+
+  &__sidebar {
+    max-width: 256px;
+    width: 100%;
+    background: #fff;
+    border: 1px solid #edf3f7;
+    box-sizing: border-box;
+
+    &-title {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+      width: 100%;
+      height: 60px;
+      background: $main;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 20px;
+      line-height: 24px;
+      color: #fff;
+      padding: 18px 16px;
+    }
+
+    &-content {
+      display: flex;
+      flex-direction: column;
+
+      &_item {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 24px;
+        color: $title;
+        padding: 11px 21px 10px;
+        width: 100%;
+
+        &-link {
+          width: 100%;
+          height: 100%;
+          border-bottom: 1px solid #edf3f7;
+
+          &:last-child {
+            border-bottom: none;
+          }
+
+          &:hover,
+          &:active {
+            background: rgba(107, 155, 192, 0.12);
+          }
+        }
+      }
+    }
+  }
+
+  &__advantages {
+    &-title {
+      @include title;
+    }
+
+    &-content {
+      margin-top: 37px;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      width: 100%;
+    }
+
+    &-item {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      width: calc((100% - 35px) / 2);
+      min-height: 100px;
+      margin-right: 35px;
+      margin-bottom: 35px;
+      background: #fff;
+      border: 1px solid #e5e5e5;
+      padding: 26px 22px 26px 20px;
+
+      &:nth-child(even) {
+        margin-right: 0;
+      }
+
+      &-num {
+        font-style: normal;
+        font-weight: 900;
+        font-size: 40px;
+        line-height: 24px;
+        color: $light;
+        margin-right: 33px;
+      }
+
+      &-title {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        color: $title;
+      }
+    }
+  }
+
+  &__related {
+    margin-top: 88px;
+
+    &-title {
+      @include title;
+    }
+
+    &-content {
+      margin-top: 37px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      align-items: flex-start;
+      width: 100%;
+
+      &_item {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: calc((100% - 74px) / 3);
+        min-height: 480px;
+        margin-right: 37px;
+        margin-bottom: 37px;
+        background: #fff;
+        border: 1px solid #e5e5e5;
+        box-sizing: border-box;
+        transition: 0.45s ease-in-out;
+
+        &:hover {
+          transform: scale(1.03);
+        }
+
+        &:nth-child(3n) {
+          margin-right: 0;
+        }
+
+        &-image {
+          width: 340px;
+          height: 219px;
+          object-fit: cover;
+          object-position: center;
+        }
+
+        &-wrapper {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          align-items: flex-start;
+          width: 100%;
+          height: 100%;
+          min-height: 260px;
+          padding: 26px 20px;
+        }
+
+        &-title {
+          font-style: normal;
+          font-weight: bold;
+          font-size: 20px;
+          line-height: 24px;
+          color: $main;
+          margin-bottom: 12px;
+
+          &:hover {
+            color: $light;
+          }
+        }
+
+        &-city {
+          position: relative;
+          font-style: normal;
+          font-weight: 600;
+          font-size: 14px;
+          line-height: 24px;
+          padding-left: 22px;
+
+          &::before {
+            position: absolute;
+            content: url("../images/svg/pin.svg");
+            top: 0;
+            left: 0;
+          }
+        }
+
+        &-text {
+          margin-top: 12px;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 24px;
+          color: $title;
+        }
+
+        &-link {
+          margin-top: auto;
+          font-style: normal;
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 24px;
+          text-decoration-line: underline;
+          color: $main;
+
+          &:hover {
+            color: $light;
+          }
+        }
+      }
+    }
+  }
+}

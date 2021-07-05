@@ -1,0 +1,153 @@
+* {
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
+  font-family: $Common;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  color: $title;
+  overflow-x: hidden;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+.wrap,
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  max-width: 100%;
+}
+
+.wrap {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  width: 100%;
+  max-width: 100%;
+}
+
+strong {
+  font-weight: bold;
+}
+
+select:active,
+select:focus {
+  outline: none;
+}
+
+input,
+button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+// faq
+details,
+summary {
+  outline: 0;
+}
+
+details > summary {
+  list-style: none;
+}
+
+details > summary::-webkit-details-marker {
+  display: none;
+}
+// button
+button {
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  overflow: visible;
+  background: transparent;
+
+  /* inherit font & color from ancestor */
+  color: inherit;
+  font: inherit;
+
+  /* Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+. */
+  line-height: normal;
+
+  /* Corrects font smoothing for webkit */
+  -webkit-font-smoothing: inherit;
+  -moz-osx-font-smoothing: inherit;
+
+  /* Corrects inability to style clickable `input` types in iOS */
+  -webkit-appearance: none;
+}
+
+button:active,
+button:focus,
+button:hover {
+  outline: 0;
+  outline-offset: 0;
+}
+// text
+p {
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+textarea {
+  font: inherit;
+  line-height: inherit;
+  margin: 0;
+  overflow: auto;
+}
+
+nav.navigation .posts-navigation {
+  display: none !important;
+}
+
+.screen-reader-text,
+.nav-links,
+.nav-previous {
+  display: none !important;
+}
+
+.full-width-outside {
+  position: relative;
+}
+
+.full-width-outside::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 100%;
+  width: 100vw;
+  background: inherit;
+  top: 0;
+  left: -50vw;
+  right: -50vw;
+  margin-right: auto;
+  margin-left: auto;
+  z-index: -1;
+}
+
+// Woo
+.woocommerce-Price-currencySymbol {
+  display: none;
+}

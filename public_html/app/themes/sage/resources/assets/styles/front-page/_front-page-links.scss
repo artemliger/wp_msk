@@ -1,0 +1,65 @@
+.front-page__links {
+  @include container;
+
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  &-item {
+    position: relative;
+    max-width: 220px;
+    width: 100%;
+    min-height: 276px;
+    color: $title;
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    transition: 0.45s ease-in-out;
+    z-index: 99;
+
+    &::after {
+      position: absolute;
+      content: url("../images/svg/arrow_bl.svg");
+      left: 18px;
+      bottom: 10%;
+    }
+
+    &:hover {
+      transform: scale(1.07);
+      background: linear-gradient(0deg, $main, $main);
+      border: none;
+      color: #fff;
+      z-index: 999;
+
+      &::after {
+        content: url("../images/svg/arrow_wh.svg");
+      }
+    }
+
+    &-link {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      height: 100%;
+      min-height: inherit;
+      width: 100%;
+      padding: 18px;
+    }
+
+    &-title {
+      font-style: normal;
+      font-weight: bold;
+      font-size: 22px;
+      line-height: 24px;
+      margin-bottom: 27px;
+    }
+
+    &-text {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+}

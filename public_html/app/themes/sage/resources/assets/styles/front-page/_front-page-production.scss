@@ -1,0 +1,65 @@
+.front-page__production {
+  @include container;
+
+  margin-bottom: 30px;
+
+  &-title {
+    @include title;
+
+    text-align: center;
+  }
+
+  &-content {
+    margin-top: 43px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+
+    &_item {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-start;
+      width: calc((100% - 37px) / 2);
+      height: 290px;
+      padding: 58px 15px 33px 28px;
+      color: #fff;
+
+      &-title {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 22px;
+        line-height: 24px;
+        max-width: 260px;
+      }
+
+      &-subtitle {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        margin-top: auto;
+        margin-bottom: auto;
+        max-width: 340px;
+      }
+
+      &-link {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 24px;
+        text-decoration-line: underline;
+
+        &:hover {
+          color: $light;
+        }
+
+        &:not(:last-child) {
+          margin-right: 44px;
+        }
+      }
+    }
+  }
+}

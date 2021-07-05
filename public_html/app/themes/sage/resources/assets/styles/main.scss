@@ -1,0 +1,48 @@
+/**
+ * Import npm dependencies
+ *
+ * Prefix your imports with `~` to grab from node_modules/
+ * @see https://github.com/webpack-contrib/sass-loader#imports
+ */
+// @import "~some-node-module";
+@import "~reset-css";
+@import "~owl.carousel/dist/assets/owl.carousel.min.css";
+@import "~select2/dist/css/select2.css";
+@import "~magnific-popup/dist/magnific-popup.css";
+
+/** Import theme styles */
+@import "common/variables";
+@import "common/global";
+@import "common/fonts";
+@import "components/mixins";
+@import "components/buttons";
+@import "components/comments";
+@import "components/forms";
+@import "components/wp-classes";
+@import "layouts/header";
+@import "layouts/sidebar";
+@import "layouts/footer";
+@import "layouts/pages";
+@import "layouts/posts";
+@import "layouts/404";
+@import "layouts/tinymce";
+
+/**    template-Front-page    */
+@import "front-page/front-page-banner";
+@import "front-page/front-page-links";
+@import "front-page/front-page-about";
+@import "front-page/front-page-production";
+@import "front-page/front-page-partners";
+@import "front-page/front-page-projects";
+@import "front-page/front-page-news";
+
+/**    template's    */
+@import "templates/template-objects";
+@import "templates/template-objects-single";
+@import "templates/template-services";
+
+/** adaptive 559 */
+
+/** adaptive 768 */
+
+/** adaptive 989 */

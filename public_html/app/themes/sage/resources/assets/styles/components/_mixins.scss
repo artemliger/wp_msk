@@ -1,0 +1,16 @@
+@mixin container {
+  max-width: 1130px;
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+@mixin title {
+  position: relative;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 24px;
+  color: $title;
+  width: 100%;
+}

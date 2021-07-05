@@ -1,0 +1,19 @@
+.banner__info-call-modal {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  color: #fff;
+  width: 200px;
+  height: 80px;
+  background: $light;
+  cursor: pointer;
+
+  &:hover {
+    background: $main;
+  }
+}
