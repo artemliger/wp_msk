@@ -25,7 +25,12 @@
       width: calc((100% - 37px) / 2);
       height: 290px;
       padding: 58px 15px 33px 28px;
+      transition: 0.65s ease-in-out;
       color: #fff;
+
+      &:hover {
+        transform: scale(1.04);
+      }
 
       &-title {
         font-style: normal;
@@ -53,7 +58,8 @@
         text-decoration-line: underline;
 
         &:hover {
-          color: $light;
+          color: $hover;
+          font-weight: bold;
         }
 
         &:not(:last-child) {

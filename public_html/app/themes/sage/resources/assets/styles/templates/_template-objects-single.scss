@@ -31,7 +31,7 @@
     &-content {
       p {
         font-style: normal;
-        font-weight: 500;
+        font-weight: normal;
         font-size: 16px;
         line-height: 24px;
         color: $text;
@@ -63,7 +63,7 @@
       &-item {
         position: relative;
         font-style: normal;
-        font-weight: 500;
+        font-weight: normal;
         font-size: 16px;
         line-height: 24px;
         color: $text;
@@ -257,7 +257,7 @@
         &-text {
           margin-top: 12px;
           font-style: normal;
-          font-weight: 500;
+          font-weight: normal;
           font-size: 16px;
           line-height: 24px;
           color: $title;

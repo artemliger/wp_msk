@@ -14,7 +14,7 @@
     color: $title;
     background: #fff;
     border: 1px solid #e5e5e5;
-    transition: 0.45s ease-in-out;
+    transition: 0.15s ease-in-out;
     z-index: 99;
 
     &::after {
@@ -33,6 +33,7 @@
 
       &::after {
         content: url("../images/svg/arrow_wh.svg");
+        animation: slideOutRight 5s infinite linear;
       }
     }
 
@@ -61,5 +62,19 @@
       font-size: 16px;
       line-height: 24px;
     }
+  }
+}
+
+@keyframes slideOutRight {
+  0% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(25px);
+  }
+
+  100% {
+    transform: translateX(0);
   }
 }
