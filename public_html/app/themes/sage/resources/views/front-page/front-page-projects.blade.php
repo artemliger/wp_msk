@@ -6,9 +6,11 @@
     @foreach($projects['projects_item'] as $projects_item)
       <div class="front-page__projects-content_item">
         <div class="front-page__projects-content_item-textarea">
-          <h3 class="front-page__projects-content_item-textarea-title">{!! $projects_item['projects_item_title'] !!}</h3>
+          <a href="{!! $projects_item['projects_item_link'] !!}" class="front-page__projects-content_item-textarea-title-link">
+            <h3 class="front-page__projects-content_item-textarea-title">{!! $projects_item['projects_item_title'] !!}</h3>
+          </a>
           <div class="front-page__projects-content_item-textarea-text">{!! $projects_item['projects_item_text'] !!}</div>
-          <a href="/" class="front-page__projects-content_item-textarea-link">Все проекты</a>
+          <a href="/obekty/" class="front-page__projects-content_item-textarea-link">Все проекты</a>
         </div>
         <div class="front-page__projects-content_item-image">
           <img src="{!! $projects_item['projects_item_bg_image'] !!}" alt="" class="front-page__projects-content_item-image-img">

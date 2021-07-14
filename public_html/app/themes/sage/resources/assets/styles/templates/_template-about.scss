@@ -1,0 +1,242 @@
+.about-page {
+  @include container;
+
+  padding-top: 80px;
+
+  &__main {
+    margin-bottom: 60px;
+
+    &-heading {
+      @include title;
+
+      margin-top: 60px;
+      margin-bottom: 34px;
+    }
+
+    &-content {
+      h2 {
+        @include title;
+
+        margin-bottom: 21px;
+      }
+
+      h3 {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 24px;
+        margin-bottom: 21px;
+        color: $title;
+      }
+
+      p {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 24px;
+        margin-bottom: 15px;
+        color: $title;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        a:hover {
+          color: $main;
+        }
+      }
+
+      strong {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 123.49%;
+        color: $text;
+      }
+
+      em {
+        font-style: italic;
+      }
+
+      .text-emit {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 123.49%;
+        margin-bottom: 15px;
+        color: $title;
+      }
+
+      ul {
+        margin-top: 2px;
+        margin-bottom: 2px;
+
+        li {
+          position: relative;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 24px;
+          color: $title;
+          padding-left: 17px;
+          margin-bottom: 3px;
+
+          &::after {
+            position: absolute;
+            content: "";
+            top: 6px;
+            left: 0;
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background-color: $main;
+          }
+        }
+      }
+    }
+
+    &-doc {
+      margin-top: 34px;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: flex-start;
+      width: 100%;
+
+      &-item {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: calc((100% - 36px) / 2);
+        min-height: 100px;
+        background: #fff;
+        border: 1px solid #e5e5e5;
+        padding: 24px 20px 23px;
+
+        &:first-child {
+          margin-right: 36px;
+        }
+      }
+
+      &-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+
+        &-title {
+          font-style: normal;
+          font-weight: bold;
+          font-size: 20px;
+          line-height: 24px;
+          color: $main;
+          margin-bottom: 5px;
+        }
+
+        &-subtitle {
+          font-style: normal;
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 24px;
+          color: $title;
+        }
+      }
+
+      &-file {
+        position: relative;
+        padding-right: 57px;
+
+        &::after {
+          position: absolute;
+          content: url("../images/svg/pdf.svg");
+          top: -15px;
+          right: 0;
+        }
+
+        &-link {
+          font-style: normal;
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 24px;
+          text-decoration-line: underline;
+          color: $main;
+
+          &:hover {
+            color: $light;
+          }
+        }
+      }
+    }
+  }
+
+  &__advantages {
+    margin-top: 60px;
+    margin-bottom: -35px;
+
+    &-title {
+      @include title;
+    }
+
+    &-content {
+      margin-top: 37px;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      width: 100%;
+    }
+
+    &-item {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      width: calc((100% - 35px) / 2);
+      min-height: 100px;
+      margin-right: 35px;
+      margin-bottom: 35px;
+      background: #fff;
+      border: 1px solid #e5e5e5;
+      padding: 26px 15px 26px 20px;
+
+      &:nth-child(even) {
+        margin-right: 0;
+      }
+
+      &-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+      }
+
+      &-num {
+        font-style: normal;
+        font-weight: 900;
+        font-size: 40px;
+        line-height: 24px;
+        color: $light;
+        margin-right: 33px;
+      }
+
+      &-title {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 24px;
+        color: $main;
+        margin-bottom: 5px;
+      }
+
+      &-text {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        color: $title;
+      }
+    }
+  }
+}

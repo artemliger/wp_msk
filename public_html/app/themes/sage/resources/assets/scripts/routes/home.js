@@ -30,12 +30,12 @@ export default {
     let slider2 = $('.front-page__projects-content');
     slider2.addClass('owl-carousel')
       .owlCarousel({
-        center: false,
+        center: true,
         loop: false,
         margin: 23,
         nav: true,
         dots: true,
-        items: 1.2,
+        items: 1,
         autoplay: false,
         autoplayTimeout: 7500,
         autoplayHoverPause: false,
@@ -46,11 +46,14 @@ export default {
         touchDrag: true,
       });
 
-    /*
-    $('.owl-dot').each(function(){
-      $(this).children('span').text($(this).index()+1);
+    $('.owl-carousel').on('initialized.owl.carousel changed.owl.carousel', function(e) {
+      //if (!e.namespace || e.property.name != 'position') return
+      $('.owl-dots').text(e.relatedTarget.relative(e.item.index) + 1 + '/' + e.item.count)
     });
-    */
+
+    /*$('.owl-dot').each(function(){
+      $(this).children('span').text($(this).index()+1);
+    });*/
   },
 
   finalize() {

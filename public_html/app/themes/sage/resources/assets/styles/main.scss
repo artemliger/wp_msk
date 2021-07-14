@@ -23,6 +23,7 @@
 @import "layouts/sidebar";
 @import "layouts/footer";
 @import "layouts/pages";
+@import "layouts/post-page";
 @import "layouts/posts";
 @import "layouts/404";
 @import "layouts/tinymce";
@@ -37,9 +38,13 @@
 @import "front-page/front-page-news";
 
 /**    template's    */
+@import "templates/template-about";
 @import "templates/template-objects";
 @import "templates/template-objects-single";
 @import "templates/template-services";
+@import "templates/template-production";
+@import "templates/template-vacancies";
+@import "templates/template-contact";
 
 /** adaptive 559 */
 

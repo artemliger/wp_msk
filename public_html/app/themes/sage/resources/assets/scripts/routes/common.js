@@ -6,9 +6,12 @@ export default {
     this.objectsPage();
     this.objectsPagination();
     this.objectsSingleSlider();
+    this.productTab();
+    this.productSlider();
     this.phoneMask();
     this.labelClass();
     this.callModal();
+    this.newsPagination();
   },
 
   objectsPage() {
@@ -55,7 +58,7 @@ export default {
         center: false,
         loop: true,
         margin: 0,
-        nav: false,
+        nav: true,
         dots: true,
         items: 1,
         autoplay: false,
@@ -66,7 +69,78 @@ export default {
         navSpeed: 2000,
         mouseDrag: true,
         touchDrag: true,
-      })
+      });
+
+    $('.owl-carousel').on('initialized.owl.carousel changed.owl.carousel', function(e) {
+      //if (!e.namespace || e.property.name != 'position') return
+      $('.owl-dots').text(e.relatedTarget.relative(e.item.index) + 1 + '/' + e.item.count)
+    });
+  },
+
+  productTab() {
+    let tabItem = '.production-page__price-tabs-item';
+    let contentItem = '.production-page__price-table';
+
+    $(tabItem + ':first-of-type').addClass('item--active')
+    $(tabItem + ':not(:first-of-type)').removeClass('item--active')
+    /* клик по любому табу */
+    $(tabItem).click(function () {
+      /* убираем активность с перового таба */
+      /*$(tabItem).removeClass('item--active');*/
+      /* делаем таб активным */
+      $(this).toggleClass('item--active');
+      /* первый блок в топку */
+      $(contentItem).fadeOut(0);
+      /* ищем блок с идентичным свойством data-name для отображения */
+      $(contentItem + '[data-name="' + $(this).data('name') + '"]').fadeToggle(100);
+      /* проверяем, если нет выбранных табов то выыводим вновь все и делаем первый таб активным */
+      if ($('.item--active').length < 1) {
+        $(tabItem).addClass('item--active');
+      }
+    });
+
+    /* клик по первому табу */
+    $(tabItem).click(function () {
+      $(tabItem).removeClass('item--active');
+      $(this).addClass('item--active');
+    });
+  },
+
+  productSlider() {
+    let slider3 = $('.production-page__product-content');
+
+    slider3.addClass('owl-carousel')
+      .owlCarousel({
+        center: false,
+        loop: false,
+        margin: 40,
+        nav: true,
+        dots: false,
+        items: 3,
+        autoplay: false,
+        autoplayTimeout: 7500,
+        autoplayHoverPause: false,
+        autoHeight: false,
+        autoplaySpeed: 1000,
+        navSpeed: 2000,
+        mouseDrag: true,
+        touchDrag: true,
+        responsive: {
+          0: {
+            items: 1,
+            margin: 0,
+          },
+          600: {
+            items: 2,
+          },
+          768: {
+            items: 2,
+          },
+          990: {
+            items: 3,
+          },
+        },
+      });
   },
 
   phoneMask() {
@@ -94,7 +168,7 @@ export default {
       $('#wpcf7-f226-o3').fadeIn(250);
     });
 
-    $('.request-modal').on('click', function (e) {
+    $('.request-modal, .vacancies-page__main-item-content_footer-link').on('click', function (e) {
       e.preventDefault();
       $('.modal__wrapper').fadeIn(250);
       $('#wpcf7-f227-o1').fadeIn(250);
@@ -108,6 +182,10 @@ export default {
         $('.modal__block > .wpcf7').fadeOut(250);
       }
     });
+  },
+
+  newsPagination() {
+    $('.post-page__list').pagify(6, '.post-page__list-item');
   },
 
   finalize() {

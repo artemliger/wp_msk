@@ -1,0 +1,155 @@
+.post-page {
+  @include container;
+
+  padding-top: 80px;
+
+  &__title {
+    @include title;
+
+    margin-top: 60px;
+    margin-bottom: 34px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+
+    &-item {
+      width: calc((100% - 37px) / 2);
+      margin-right: 37px;
+      margin-bottom: 60px;
+
+      &:nth-child(even) {
+        margin-right: 0;
+      }
+
+      &-title {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 22px;
+        line-height: 24px;
+        color: $main;
+        margin-bottom: 14px;
+
+        &:hover {
+          color: $light;
+        }
+      }
+
+      &-date {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 24px;
+        color: $light;
+      }
+
+      &-image {
+        width: 100%;
+        height: 269px;
+        margin-top: 18px;
+
+        &-img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
+        }
+      }
+
+      &-text {
+        margin-top: 12px;
+        margin-bottom: 30px;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 24px;
+        color: $title;
+      }
+
+      &-more {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 24px;
+        text-decoration-line: underline;
+        color: $main;
+
+        &:hover {
+          color: $light;
+        }
+      }
+    }
+  }
+
+  .navigation,
+  .pagination {
+    max-width: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+
+    .screen-reader-text {
+      display: none !important;
+    }
+
+    .nav {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .page {
+      background: #fff;
+      border: 1px solid #e5e5e5;
+      box-sizing: border-box;
+      border-radius: 2px;
+      width: 26px;
+      height: 26px;
+      margin: 5px;
+      margin-right: 6px;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 24px;
+      color: $title;
+      transition: $linear25;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      &.current,
+      &:hover {
+        background: $light;
+        color: #fff;
+        cursor: pointer;
+      }
+    }
+
+    .next {
+      width: 26px;
+      height: 26px;
+      margin-left: -7px;
+      font-size: 0;
+      cursor: pointer;
+      background: url("../images/svg/next_sm.svg") no-repeat center center;
+    }
+
+    .prev {
+      width: 26px;
+      height: 26px;
+      font-size: 0;
+      cursor: pointer;
+      background: url("../images/svg/prev_sm.svg") no-repeat center center;
+    }
+  }
+}

@@ -1,7 +1,9 @@
 .front-page__projects {
   @include container;
 
+  position: relative;
   margin-top: 60px;
+  min-height: 336px;
 
   &-title {
     @include title;
@@ -15,6 +17,7 @@
       flex-direction: row;
       justify-content: flex-start;
       align-items: flex-start;
+      width: 100%;
 
       &-textarea {
         display: flex;
@@ -22,6 +25,7 @@
         justify-content: center;
         align-items: flex-start;
         max-width: 404px;
+        width: 100%;
         min-height: 293px;
         margin-right: 40px;
         padding-top: 56px;
@@ -33,6 +37,10 @@
           line-height: 24px;
           color: $main;
           margin-bottom: 14px;
+
+          &:hover {
+            color: $light;
+          }
         }
 
         &-text {
@@ -71,9 +79,42 @@
       }
     }
 
+    .owl-nav {
+      button {
+        position: absolute;
+        bottom: -36px;
+        width: 20px;
+        height: 30px;
+        outline: none;
+        background-size: 16px;
+        font-size: 0;
+        z-index: 99;
+
+        span {
+          font-size: 0;
+        }
+
+        &.owl-prev {
+          left: 77.8%;
+          background: url("../images/svg/prev_sl.svg") no-repeat center center;
+          z-index: 99;
+        }
+
+        &.owl-next {
+          right: 170px;
+          background: url("../images/svg/next_sl.svg") no-repeat center center;
+          z-index: 99;
+        }
+
+        &.disabled {
+          opacity: 0.5 !important;
+        }
+      }
+    }
+
     .owl-dots {
       position: absolute;
-      bottom: -15px;
+      bottom: -34px;
       right: 0;
       max-width: 80%;
       width: 100%;
@@ -83,20 +124,27 @@
       align-items: center;
       margin: 0;
       margin-right: 18%;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 24px;
+      color: $text;
 
       .owl-dot {
+        display: none;
         width: 5px;
         height: 5px;
         border-radius: 50%;
         background: $main;
         box-sizing: border-box;
-        display: flex;
+        //display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
         margin: 15px 5px;
         outline: none;
 
+        /*
         &.active {
           position: relative;
           width: 11px;
@@ -104,13 +152,16 @@
           border: 1px solid $main;
           background: none;
         }
+        */
       }
     }
   }
 
+  /*
   .owl-item .active {
     .front-page__projects-content_item {
       display: none !important;
     }
   }
+  */
 }

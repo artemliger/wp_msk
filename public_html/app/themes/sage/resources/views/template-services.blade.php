@@ -1,5 +1,5 @@
 {{--
-  Template Name: Услуги/Продукция
+  Template Name: Услуги
 --}}
 
 @extends('layouts.app')

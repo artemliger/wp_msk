@@ -1,0 +1,229 @@
+.vacancies-page {
+  @include container;
+
+  padding-top: 80px;
+
+  &__heading {
+    @include title;
+
+    margin-top: 60px;
+    margin-bottom: 34px;
+  }
+
+  &__main {
+    &-item {
+      background: #fff;
+      border: 1px solid #e5e5e5;
+      padding: 24px 38px 22px 39px;
+      margin-bottom: 20px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &_head {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 100%;
+        z-index: 2;
+
+        &::after {
+          position: absolute;
+          content: "Подробнее";
+          bottom: 0;
+          right: 0;
+          font-style: normal;
+          font-weight: 600;
+          font-size: 14px;
+          line-height: 24px;
+          text-decoration-line: underline;
+          color: $main;
+          z-index: 1;
+        }
+
+        &-title {
+          font-style: normal;
+          font-weight: bold;
+          font-size: 20px;
+          line-height: 24px;
+          color: $main;
+          margin-bottom: 14px;
+        }
+
+        &-content {
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-start;
+          align-items: flex-start;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 24px;
+          color: $title;
+
+          &-experience {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: flex-start;
+            color: $main;
+            margin-right: 40px;
+
+            &-title {
+              margin-right: 10px;
+              color: $title;
+            }
+          }
+
+          &-salary {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: flex-start;
+            color: $main;
+
+            &-title {
+              margin-right: 10px;
+              color: $title;
+            }
+          }
+        }
+      }
+
+      &-content {
+        margin-top: 20px;
+
+        h2 {
+          @include title;
+
+          margin-bottom: 20px;
+        }
+
+        h3 {
+          font-style: normal;
+          font-weight: normal;
+          font-size: 16px;
+          line-height: 24px;
+          margin-bottom: 20px;
+          color: $text;
+        }
+
+        p {
+          font-style: normal;
+          font-weight: normal;
+          font-size: 16px;
+          line-height: 24px;
+          margin-bottom: 17px;
+          color: $text;
+
+          a:hover {
+            color: $main;
+          }
+        }
+
+        strong {
+          font-style: normal;
+          font-weight: bold;
+          font-size: 16px;
+          line-height: 123.49%;
+          color: $text;
+        }
+
+        em {
+          font-style: italic;
+        }
+
+        .text-emit {
+          font-style: normal;
+          font-weight: bold;
+          font-size: 16px;
+          line-height: 123.49%;
+          margin-bottom: 15px;
+          color: $title;
+        }
+
+        ul {
+          margin-top: 10px;
+          margin-bottom: 10px;
+
+          li {
+            position: relative;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 24px;
+            color: $text;
+            padding-left: 25px;
+            margin-bottom: 3px;
+
+            &::after {
+              position: absolute;
+              content: "";
+              top: 11px;
+              left: 10px;
+              width: 3px;
+              height: 3px;
+              border-radius: 50%;
+              background-color: $text;
+            }
+          }
+        }
+
+        &_footer {
+          margin-top: 40px;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: flex-start;
+          width: 100%;
+
+          &-link {
+            font-style: normal;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 24px;
+            text-decoration-line: underline;
+            color: $main;
+
+            &:hover {
+              color: $light;
+            }
+          }
+
+          &-info {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: flex-start;
+            color: $main;
+
+            &-title {
+              margin-right: 10px;
+              color: $title;
+            }
+
+            &-phone {
+              font-style: normal;
+              font-weight: 600;
+              font-size: 16px;
+              line-height: 24px;
+
+              &:hover {
+                color: $light;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+details[open] {
+  .vacancies-page__main-item_head::after {
+    content: none;
+  }
+}
