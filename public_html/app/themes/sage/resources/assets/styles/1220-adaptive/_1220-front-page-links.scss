@@ -1,0 +1,25 @@
+@media (min-width: 990px) and (max-width: 1220px) {
+  .front-page__links {
+    margin-top: 40px;
+  }
+
+  .front-page__links-wrapper {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    width: 100%;
+    background: inherit;
+  }
+
+  .front-page__links-item {
+    max-width: none;
+    width: calc((100% - 63px) / 3);
+    min-height: 195px;
+    margin-right: 30px;
+    margin-bottom: 15px;
+    border: 1px solid #e5e5e5;
+
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+  }
+}

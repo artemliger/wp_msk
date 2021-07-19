@@ -6,6 +6,7 @@
   &__title {
     @include title;
 
+    line-height: 34px;
     margin-top: 60px;
     margin-bottom: 34px;
   }
@@ -19,6 +20,7 @@
 
     &-text {
       width: 100%;
+      max-width: 550px;
 
       p {
         font-style: normal;
@@ -31,9 +33,9 @@
     }
 
     &-image {
-      max-width: 477px;
+      //max-width: 477px;
       width: 100%;
-      height: 240px;
+      height: 250px;
       margin-left: 19px;
 
       &-img {
@@ -86,10 +88,34 @@
       font-size: 14px;
       line-height: 24px;
       text-decoration-line: underline;
-      color: $light;
+      color: $main;
+
+      a[rel=prev] {
+        position: relative;
+        padding-left: 28px;
+
+        &::after {
+          position: absolute;
+          content: url("../images/svg/prev_sl.svg");
+          top: 0;
+          left: 0;
+        }
+      }
+
+      a[rel=next] {
+        position: relative;
+        padding-right: 28px;
+
+        &::after {
+          position: absolute;
+          content: url("../images/svg/next_sl.svg");
+          top: 0;
+          right: 0;
+        }
+      }
 
       &:hover {
-        color: $main;
+        color: $light;
       }
     }
   }

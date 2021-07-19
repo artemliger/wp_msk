@@ -1,0 +1,28 @@
+@media (min-width: 769px) and (max-width: 989px) {
+  .front-page__news-title {
+    font-size: 26px;
+  }
+
+  .front-page__news-list {
+    margin-top: 30px;
+  }
+
+  .front-page__news-list-item {
+    width: calc((100% - 25px) / 2);
+    min-height: 260px;
+  }
+
+  .front-page__news-list-item:first-child {
+    margin-right: 25px;
+  }
+
+  .front-page__news-list-item-title {
+    font-size: 20px;
+    line-height: 22px;
+    margin-bottom: 12px;
+  }
+
+  .front-page__news-list-item-desc {
+    margin-bottom: 12px;
+  }
+}

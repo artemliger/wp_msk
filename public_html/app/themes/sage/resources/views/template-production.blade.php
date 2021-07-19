@@ -37,7 +37,7 @@
       </aside>
     </div>
 
-    <div class="production-page__price">
+    <div id="price" class="production-page__price">
       <h3 class="production-page__price-title">{!! $production['production_price_heading'] !!}</h3>
       <div class="production-page__price-content">
         @if($production['production_price'])

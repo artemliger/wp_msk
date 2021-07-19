@@ -1,0 +1,29 @@
+@media (min-width: 769px) and (max-width: 989px) {
+  .front-page__projects-title {
+    font-size: 26px;
+  }
+
+  .front-page__projects-content_item-image {
+    width: 100%;
+    max-width: 400px;
+    height: 290px;
+  }
+
+  .front-page__projects-content_item-textarea {
+    margin-right: 25px;
+  }
+
+  .front-page__projects-content_item-textarea-title {
+    font-size: 20px;
+    line-height: 22px;
+    margin-bottom: 12px;
+  }
+
+  .front-page__projects-content .owl-nav button.owl-next {
+    right: 14.5%;
+  }
+
+  .front-page__projects-content .owl-nav button.owl-prev {
+    left: 76%;
+  }
+}

@@ -47,7 +47,36 @@
 @import "templates/template-contact";
 
 /** adaptive 559 */
+@import "559-adaptive/559-front-page-banner";
+@import "559-adaptive/559-front-page-links";
+@import "559-adaptive/559-front-page-about";
+@import "559-adaptive/559-front-page-production";
+@import "559-adaptive/559-front-page-projects";
+@import "559-adaptive/559-front-page-news";
+@import "559-adaptive/559-footer";
 
 /** adaptive 768 */
+@import "768-adaptive/768-header";
+@import "768-adaptive/768-front-page-banner";
+@import "768-adaptive/768-front-page-links";
+@import "768-adaptive/768-front-page-about";
+@import "768-adaptive/768-front-page-production";
+@import "768-adaptive/768-front-page-projects";
+@import "768-adaptive/768-front-page-news";
+@import "768-adaptive/768-footer";
 
 /** adaptive 989 */
+@import "989-adaptive/989-front-page-banner";
+@import "989-adaptive/989-front-page-links";
+@import "989-adaptive/989-front-page-about";
+@import "989-adaptive/989-front-page-production";
+@import "989-adaptive/989-front-page-projects";
+@import "989-adaptive/989-front-page-news";
+@import "989-adaptive/989-footer";
+
+/** adaptive 1220 */
+@import "1220-adaptive/1220-header";
+@import "1220-adaptive/1220-front-page-banner";
+@import "1220-adaptive/1220-front-page-links";
+@import "1220-adaptive/1220-front-page-projects";
+@import "1220-adaptive/1220-footer";

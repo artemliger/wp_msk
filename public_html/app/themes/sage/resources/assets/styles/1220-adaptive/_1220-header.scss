@@ -1,0 +1,112 @@
+@media (min-width: 769px) and (max-width: 1220px) {
+  .banner__nav-primary {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin-right: 0;
+    padding-top: 50px;
+    max-width: 60%;
+    background-color: rgba($title, 0.97);
+    color: $main;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    z-index: 5;
+
+    &--active {
+      display: block;
+    }
+  }
+
+  .banner__nav-primary-list {
+    padding-top: 90px;
+    padding-left: 40px;
+    flex-direction: column;
+    max-width: 100%;
+    width: 100%;
+    align-items: start;
+  }
+
+  .banner__nav-primary-list li.menu-item {
+    margin-right: 0;
+    margin-bottom: 15px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .banner__nav-primary-list li.menu-item a {
+    font-size: 18px;
+    line-height: 20px;
+    color: #fff;
+  }
+
+  .banner__nav-primary-list li.menu-item.menu-item-has-children ul.sub-menu li.menu-item {
+    margin-bottom: 0;
+  }
+
+  .banner__nav-primary-list li.menu-item.menu-item-has-children ul.sub-menu li.menu-item a {
+    text-align: left;
+  }
+
+  .banner__info {
+    justify-content: space-around;
+  }
+
+  .banner .navi {
+    background: transparent;
+    position: relative;
+    height: 100%;
+    display: block;
+    z-index: 199;
+    transition: 0.5s ease-in-out;
+    padding: 23px 27px;
+    margin-left: 10px;
+
+    &::before,
+    &::after {
+      background: $title;
+      backface-visibility: hidden;
+      content: "";
+      height: 4.63px;
+      left: calc(50% - 12.5px);
+      transition: 0.5s ease-in-out;
+      width: 38px;
+      border-radius: 2px;
+    }
+
+    &::before {
+      box-shadow: $title 0 9px 0 0;
+      position: absolute;
+      top: calc(50% - 10px);
+    }
+
+    &::after {
+      position: absolute;
+      top: calc(50% + 8px);
+    }
+
+    &--active {
+      transition: 0.5s ease-in-out;
+
+      &::before,
+      &::after {
+        background: #fff;
+      }
+
+      &::before {
+        box-shadow: #fff 0 0 0 0;
+        top: 50%;
+        transform: rotate(-45deg);
+      }
+
+      &::after {
+        top: 50%;
+        transform: rotate(45deg);
+      }
+    }
+  }
+}

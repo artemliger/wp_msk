@@ -1,0 +1,21 @@
+@media (min-width: 769px) and (max-width: 989px) {
+  .content-info__footer {
+    flex-wrap: wrap;
+    padding-top: 35px;
+    padding-bottom: 35px;
+  }
+
+  .content-info__footer-contacts {
+    margin-top: 30px;
+  }
+
+  .content-info__footer-bottom-wrapper {
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-bottom: 19px;
+  }
+
+  .content-info__footer-bottom-copyright {
+    margin-bottom: 10px;
+  }
+}

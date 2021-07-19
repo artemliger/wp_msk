@@ -55,7 +55,9 @@
         <div class="services-page__related-content">
           @foreach($services['services_related'] as $services_related)
             <div class="services-page__related-content_item">
-              <img src="{!! get_the_post_thumbnail_url($services_related['services_related_item']) !!}" alt="{!! get_the_title($services_related['services_related_item']) !!}" class="services-page__related-content_item-image">
+              <a href="{!! get_permalink($services_related['services_related_item']) !!}">
+                <img src="{!! get_the_post_thumbnail_url($services_related['services_related_item']) !!}" alt="{!! get_the_title($services_related['services_related_item']) !!}" class="services-page__related-content_item-image">
+              </a>
               <div class="services-page__related-content_item-wrapper">
                 <a href="{!! get_permalink($services_related['services_related_item']) !!}" class="services-page__related-content_item-link-title">
                   <h3 class="services-page__related-content_item-title">{!! get_the_title($services_related['services_related_item']) !!}</h3>

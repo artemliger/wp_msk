@@ -21,25 +21,27 @@
 
       <div class="about-page__main-doc">
         @foreach($about['about_doc'] as $about_doc)
-          <div class="about-page__main-doc-item">
-            <div class="about-page__main-doc-info">
-              <div class="about-page__main-doc-info-title">{!! $about_doc['about_doc_title'] !!}</div>
-              @if($about_doc['about_doc_subtitle'])
-                <div class="about-page__main-doc-info-subtitle">{!! $about_doc['about_doc_subtitle'] !!}</div>
+          @if($about_doc['about_doc_file'])
+            <div class="about-page__main-doc-item">
+              <div class="about-page__main-doc-info">
+                <div class="about-page__main-doc-info-title">{!! $about_doc['about_doc_title'] !!}</div>
+                @if($about_doc['about_doc_subtitle'])
+                  <div class="about-page__main-doc-info-subtitle">{!! $about_doc['about_doc_subtitle'] !!}</div>
+                @endif
+              </div>
+              @if($about_doc['about_doc_file'])
+                <a href="{!! $about_doc['about_doc_file'] !!}" class="about-page__main-doc-file-link" target="_blank">
+                  <div class="about-page__main-doc-file">
+                    @if($about_doc['about_doc_file_name'])
+                      {!! $about_doc['about_doc_file_name'] !!}
+                    @else
+                      Скачать файл
+                    @endif
+                  </div>
+                </a>
               @endif
             </div>
-            @if($about_doc['about_doc_file'])
-              <div class="about-page__main-doc-file">
-                <a href="{!! $about_doc['about_doc_file'] !!}" class="about-page__main-doc-file-link" target="_blank">
-                  @if($about_doc['about_doc_file_name'])
-                    {!! $about_doc['about_doc_file_name'] !!}
-                  @else
-                    Скачать файл
-                  @endif
-                </a>
-              </div>
-            @endif
-          </div>
+          @endif
         @endforeach
       </div>
     </div>

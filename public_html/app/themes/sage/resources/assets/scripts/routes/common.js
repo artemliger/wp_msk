@@ -12,6 +12,8 @@ export default {
     this.labelClass();
     this.callModal();
     this.newsPagination();
+    this.scroll();
+    this.test();
   },
 
   objectsPage() {
@@ -48,7 +50,8 @@ export default {
   },
 
   objectsPagination() {
-    $('.objects-page__main-content').pagify(9, '.objects-page__main-content_item');
+    //$('.objects-page__main-content').pagify(9, '.objects-page__main-content_item');
+    $('.objects-page__main-content').pagify(3, '.objects-page__main-content_item');
   },
 
   objectsSingleSlider() {
@@ -75,6 +78,10 @@ export default {
       //if (!e.namespace || e.property.name != 'position') return
       $('.owl-dots').text(e.relatedTarget.relative(e.item.index) + 1 + '/' + e.item.count)
     });
+
+    setTimeout(function() {
+      $('.objects-single-page__main-slider').trigger('refresh.owl.carousel');
+    }, 150);
   },
 
   productTab() {
@@ -103,6 +110,15 @@ export default {
     $(tabItem).click(function () {
       $(tabItem).removeClass('item--active');
       $(this).addClass('item--active');
+    });
+  },
+
+  test() {
+    let item = '.services-page__sidebar-content_item-link';
+
+    $(item).click(function () {
+      $(this).addClass('item--active');
+      //$(item).removeClass('item--active');
     });
   },
 
@@ -141,6 +157,19 @@ export default {
           },
         },
       });
+
+    $('.production-page__product-item-image img').magnificPopup({
+      type: 'image',
+      gallery: {
+        enabled: true,
+        tCounter: '%curr% из %total%',
+      },
+      callbacks: {
+        elementParse: function (qw) {
+          qw.src = qw.el.attr('src');
+        },
+      },
+    });
   },
 
   phoneMask() {
@@ -188,7 +217,24 @@ export default {
     $('.post-page__list').pagify(6, '.post-page__list-item');
   },
 
+  scroll() {
+    /*
+    let $page = $('html, body');
+    $('a[href*="#"]').click(function() {
+      $page.animate({
+        scrollTop: $($.attr(this, 'href')).offset().top - 150,
+      }, 600);
+      return false;
+    });
+    */
+  },
+
   finalize() {
     // JavaScript to be fired on all pages, after page specific JS is fired
+    $('.navi').on('click', function (e) {
+      e.preventDefault();
+      $(this).toggleClass('navi--active');
+      $('.banner__nav-primary').toggleClass('banner__nav-primary--active');
+    });
   },
 };

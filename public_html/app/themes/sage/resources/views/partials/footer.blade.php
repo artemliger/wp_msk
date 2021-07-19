@@ -36,7 +36,7 @@
   </div>
   <div class="content-info__footer-bottom">
     <div class="content-info__footer-bottom-wrapper">
-      <small class="content-info__footer-bottom-item">© 2021 ООО «Стройсталь» проектирование, изготовление и монтаж металлоконструкций</small>
+      <small class="content-info__footer-bottom-item content-info__footer-bottom-copyright">© 2021 ООО «Стройсталь» проектирование, изготовление и монтаж металлоконструкций</small>
       <span class="content-info__footer-bottom-item">
       <a href="/privacy" class="content-info__footer-bottom-item-link" rel="nofollow noopener noreferrer" target="_blank">Политика конфиденциальности</a>
     </span>

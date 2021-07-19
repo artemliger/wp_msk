@@ -1,0 +1,26 @@
+@media (min-width: 990px) and (max-width: 1220px) {
+  .front-page__banner-item-slider .owl-nav button.owl-next {
+    left: 46%;
+  }
+
+  .front-page__banner-item,
+  .front-page__banner-item-slider-pic {
+    min-height: 455px;
+  }
+
+  .front-page__banner-item-content-title {
+    font-size: 34px;
+    line-height: 46px;
+    margin-bottom: 12px;
+    max-width: 575px;
+  }
+
+  .front-page__banner-item-content-title-emit {
+    color: $title;
+  }
+
+  .front-page__banner-item-content-subtitle {
+    font-size: 17px;
+    line-height: 24px;
+  }
+}

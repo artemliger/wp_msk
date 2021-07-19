@@ -1,0 +1,29 @@
+@media (min-width: 769px) and (max-width: 989px) {
+  .front-page__production-title {
+    font-size: 26px;
+  }
+
+  .front-page__production-content {
+    margin-top: 35px;
+  }
+
+  .front-page__production-content_item {
+    width: calc((100% - 25px) / 2);
+    height: 250px;
+    padding: 40px 15px 30px 25px;
+
+    &:nth-child(odd) {
+      margin-right: 25px;
+    }
+  }
+
+  .front-page__production-content_item-title {
+    font-size: 20px;
+    line-height: 22px;
+  }
+
+  .front-page__production-content_item-subtitle {
+    font-size: 15px;
+    line-height: 22px;
+  }
+}
