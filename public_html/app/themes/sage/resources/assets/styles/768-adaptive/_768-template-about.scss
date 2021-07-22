@@ -1,0 +1,50 @@
+@media (min-width: 560px) and (max-width: 768px) {
+  .about-page__main {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+
+  .about-page__main-heading {
+    margin-bottom: 20px;
+    font-size: 22px;
+  }
+
+  .about-page__main-image {
+    display: none;
+  }
+
+  .about-page__main-doc {
+    flex-direction: column;
+  }
+
+  .about-page__main-doc-item {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .about-page__main-doc-item:first-child {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .about-page__advantages-title {
+    font-size: 22px;
+  }
+
+  .about-page__advantages-content {
+    flex-direction: column;
+    margin-top: 30px;
+  }
+
+  .about-page__advantages-item {
+    width: 100%;
+    min-height: 0;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .about-page__advantages-item-num {
+    margin-right: 20px;
+    font-size: 30px;
+  }
+}

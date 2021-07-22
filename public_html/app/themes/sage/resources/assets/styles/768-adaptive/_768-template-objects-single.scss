@@ -1,0 +1,111 @@
+@media (min-width: 560px) and (max-width: 768px) {
+  .objects-single-page__main {
+    position: relative;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .objects-single-page__main-info {
+    margin-right: 0;
+    margin-top: 20px;
+    max-width: 100%;
+    order: 2;
+  }
+
+  .objects-single-page__main-heading {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-size: 22px;
+    max-width: 100%;
+  }
+
+  .objects-single-page__main-list {
+    margin-top: 10px;
+  }
+
+  .objects-single-page__sidebar {
+    display: none;
+  }
+
+  .objects-single-page__main-slider {
+    max-width: 100%;
+    margin-right: 0;
+    margin-top: 85px;
+    order: 1;
+  }
+
+  .objects-single-page__main-slider-item {
+    height: 230px;
+  }
+
+  .objects-single-page__main-footer-city,
+  .objects-single-page__main-footer-date {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .objects-single-page__related {
+    margin-top: 50px;
+  }
+
+  .objects-single-page__related-title {
+    font-size: 22px;
+  }
+
+  .objects-single-page__related-content {
+    margin-top: 30px;
+  }
+
+  .objects-single-page__related-content_item {
+    width: 100%;
+    min-height: 0;
+    margin-bottom: 0;
+  }
+
+  .objects-single-page__related-content_item-image {
+    height: 200px;
+  }
+
+  .objects-single-page__related-content_item-image-link {
+    height: 200px;
+  }
+
+  .objects-single-page__related-content_item-title {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .objects-single-page__related-content_item-text {
+    margin-top: 10px;
+  }
+
+  .objects-single-page__related-content_item-link {
+    font-size: 14px;
+    margin-top: 15px;
+  }
+
+  .objects-single-page__related-content_item-wrapper {
+    padding: 20px 15px;
+  }
+
+  .objects-single-page__main-footer {
+    margin-top: 15px;
+  }
+
+  .objects-single-page__main-slider .owl-dots {
+    display: none !important;
+    right: 5px;
+  }
+
+  .objects-single-page__main-slider .owl-nav button {
+    display: none;
+  }
+
+  .objects-single-page__main-slider .owl-nav button.owl-prev {
+    left: 77%;
+  }
+}

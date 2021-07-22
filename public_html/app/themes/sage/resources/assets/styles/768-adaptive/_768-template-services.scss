@@ -1,0 +1,69 @@
+@media (min-width: 560px) and (max-width: 768px) {
+  .services-page__main {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+
+  .services-page__main-heading {
+    margin-bottom: 20px;
+    font-size: 22px;
+  }
+
+  .services-page__main-info {
+    margin-right: 0;
+    max-width: 100%;
+  }
+
+  .services-page__sidebar {
+    display: none;
+  }
+
+  .services-page__advantages-title {
+    font-size: 22px;
+  }
+
+  .services-page__advantages-content {
+    flex-direction: column;
+    margin-top: 30px;
+  }
+
+  .services-page__advantages-item {
+    width: 100%;
+    min-height: 0;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .services-page__advantages-item-num {
+    margin-right: 20px;
+    font-size: 30px;
+  }
+
+  .services-page__related-title {
+    font-size: 22px;
+  }
+
+  .services-page__related-content {
+    margin-top: 30px;
+  }
+
+  .services-page__related-content_item {
+    width: 100%;
+
+    a {
+      width: 100%;
+    }
+  }
+
+  .services-page__related-content_item-image {
+    height: 200px;
+  }
+
+  .services-page__related-content_item-title {
+    font-size: 18px;
+  }
+
+  .services-page__related-content_item-link {
+    font-size: 14px;
+  }
+}

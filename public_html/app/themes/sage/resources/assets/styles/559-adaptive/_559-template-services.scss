@@ -1,0 +1,86 @@
+@media (min-width: 1px) and (max-width: 559px) {
+  .services-page__main {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .services-page__main-heading {
+    margin-bottom: 10px;
+    font-size: 20px;
+  }
+
+  .services-page__main-info {
+    margin-right: 0;
+    max-width: 100%;
+  }
+
+  .services-page__sidebar {
+    display: none;
+  }
+
+  .services-page__advantages-title {
+    font-size: 20px;
+  }
+
+  .services-page__advantages-content {
+    flex-direction: column;
+    margin-top: 30px;
+  }
+
+  .services-page__advantages-item {
+    width: 100%;
+    min-height: 0;
+    margin-right: 0;
+    margin-bottom: 18px;
+  }
+
+  .services-page__advantages-item-title {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .services-page__advantages-item-num {
+    margin-right: 16px;
+    font-size: 21px;
+  }
+
+  .services-page__related-title {
+    font-size: 20px;
+  }
+
+  .services-page__related-content {
+    margin-top: 30px;
+  }
+
+  .services-page__related-content_item-wrapper {
+    padding: 20px 15px;
+    min-height: 0;
+  }
+
+  .services-page__related-content_item {
+    width: 100%;
+    min-height: 0;
+    margin-bottom: 0;
+
+    a {
+      width: 100%;
+    }
+  }
+
+  .services-page__related-content_item-image {
+    height: 185px;
+  }
+
+  .services-page__related-content_item-city {
+    font-size: 12px;
+  }
+
+  .services-page__related-content_item-title {
+    font-size: 16px;
+  }
+
+  .services-page__related-content_item-link {
+    font-size: 14px;
+    margin-top: 20px;
+  }
+}

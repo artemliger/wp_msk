@@ -1,0 +1,7 @@
+@media (min-width: 990px) and (max-width: 1220px) {
+  .objects-page__main-content_item {
+    width: calc((100% - 60px) / 3);
+    margin-right: 30px;
+    margin-bottom: 30px;
+  }
+}

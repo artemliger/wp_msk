@@ -1,0 +1,14 @@
+@media (min-width: 990px) and (max-width: 1220px) {
+  .production-page__main-info {
+    margin-right: 0;
+    max-width: 100%;
+  }
+
+  .production-page__sidebar {
+    display: none;
+  }
+
+  .production-page__price-tabs-item {
+    width: calc((100% - 8px) / 3.4);
+  }
+}

@@ -1,0 +1,45 @@
+@media (min-width: 560px) and (max-width: 768px) {
+  .contact-page {
+    @include container;
+
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 80px;
+    margin-bottom: -54px;
+  }
+
+  .contact-page__wrapper {
+    flex-direction: column;
+  }
+
+  .contact-page__info {
+    margin-top: 40px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 30px;
+    padding-right: 0;
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  .contact-page__info-heading {
+    margin-bottom: 20px;
+    font-size: 22px;
+  }
+
+  .contact-page__info-content-main {
+    margin-bottom: 20px;
+  }
+
+  .contact-page__info-content-main-title {
+    font-size: 18px;
+    line-height: 20px;
+    margin-bottom: 10px;
+  }
+
+  .contact-page__map {
+    position: static;
+    max-width: 100%;
+    height: 300px;
+  }
+}

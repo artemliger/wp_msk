@@ -11,6 +11,13 @@
     align-items: flex-start;
     width: 100%;
 
+    &-list {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+    }
+
     &-item {
       max-width: 220px;
       width: 100%;

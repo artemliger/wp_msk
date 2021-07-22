@@ -31,6 +31,7 @@
 
   .content-info__footer-title {
     margin-bottom: 18px;
+    width: 100%;
   }
 
   .content-info__footer-contacts {
@@ -41,7 +42,8 @@
   }
 
   .content-info__footer-navigation-main {
-    margin-top: 18px;
+    margin-top: 0;
+    margin-right: 0;
     order: 3;
     max-width: 100%;
     width: 100%;
@@ -51,12 +53,92 @@
     order: 1;
     max-width: 100%;
     width: 100%;
+    margin-right: 0;
+  }
+
+  #menu-nizhnee-menyu-uslugi {
+    display: none;
+    margin-bottom: 18px;
+    width: 100%;
+
+    &.active {
+      display: block;
+    }
+  }
+
+  .footer-service-title {
+    position: relative;
+    height: 38px;
+    border-bottom: 1px solid #e7e7e7;
+    cursor: pointer;
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: 5px;
+      right: -5px;
+      width: 11px;
+      border: 2px solid $title;
+      border-radius: 4px;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      top: 0;
+      right: 0;
+      height: 11px;
+      border: 2px solid $title;
+      border-radius: 4px;
+    }
   }
 
   .content-info__footer-navigation-product {
     order: 2;
     max-width: 100%;
     width: 100%;
+    margin-right: 0;
+  }
+
+  #menu-nizhnee-menyu-produkcziya {
+    display: none;
+    margin-bottom: 18px;
+    width: 100%;
+
+    &.active {
+      display: block;
+    }
+  }
+
+  .footer-product-title {
+    position: relative;
+    height: 38px;
+    border-bottom: 1px solid #e7e7e7;
+    cursor: pointer;
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: 5px;
+      right: -5px;
+      width: 11px;
+      border: 2px solid $title;
+      border-radius: 4px;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      top: 0;
+      right: 0;
+      height: 11px;
+      border: 2px solid $title;
+      border-radius: 4px;
+    }
+  }
+
+  .hide::after {
+    display: none;
   }
 
   .content-info__footer-bottom-wrapper {

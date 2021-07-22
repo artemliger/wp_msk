@@ -1,0 +1,35 @@
+@media (min-width: 990px) and (max-width: 1220px) {
+  .objects-single-page__main {
+    align-items: flex-start;
+  }
+
+  .objects-single-page__main-info {
+    margin-right: 0;
+    max-width: 100%;
+  }
+
+  .objects-single-page__main-heading {
+    margin-top: 40px;
+  }
+
+  .objects-single-page__sidebar {
+    display: none;
+  }
+
+  .objects-single-page__main-slider {
+    max-width: 475px;
+    margin-right: -15px;
+  }
+
+  .objects-single-page__main-slider-item {
+    height: 350px;
+  }
+
+  .objects-single-page__related-content_item {
+    width: 100%;
+  }
+
+  .objects-single-page__main-slider .owl-nav button.owl-prev {
+    left: 86%;
+  }
+}

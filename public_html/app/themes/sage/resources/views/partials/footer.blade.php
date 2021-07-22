@@ -10,13 +10,13 @@
       @endif
     </nav>
     <nav class="content-info__footer-navigation content-info__footer-navigation-service">
-      <span class="content-info__footer-title">Услуги</span>
+      <span class="content-info__footer-title footer-service-title">Услуги</span>
       @if (has_nav_menu('footer_navigation_service'))
         {!! wp_nav_menu(['theme_location' => 'footer_navigation_service', 'menu_class' => 'footer__nav-list footer__nav-list-service']) !!}
       @endif
     </nav>
     <nav class="content-info__footer-navigation content-info__footer-navigation-product">
-      <span class="content-info__footer-title">Продукция</span>
+      <span class="content-info__footer-title footer-product-title">Продукция</span>
       @if (has_nav_menu('footer_navigation_product'))
         {!! wp_nav_menu(['theme_location' => 'footer_navigation_product', 'menu_class' => 'footer__nav-list footer__nav-list-product']) !!}
       @endif

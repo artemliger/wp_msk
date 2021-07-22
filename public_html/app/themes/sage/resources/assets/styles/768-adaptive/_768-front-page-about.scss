@@ -45,4 +45,8 @@
     font-size: 22px;
     margin-bottom: 15px;
   }
+
+  .front-page__about-textarea::after {
+    display: none;
+  }
 }

@@ -1,0 +1,24 @@
+@media (min-width: 1px) and (max-width: 1160px) {
+  .front-page__partners-content-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .front-page__partners-content-item {
+    max-width: calc(100% / 3);
+    height: 100%;
+  }
+}
+
+@media (min-width: 1px) and (max-width: 768px) {
+  .front-page__partners {
+    margin-top: 10px;
+  }
+
+  .front-page__partners-content-item {
+    max-width: calc(100% / 2);
+  }
+}

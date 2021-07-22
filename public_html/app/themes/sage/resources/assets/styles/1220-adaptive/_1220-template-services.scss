@@ -1,0 +1,18 @@
+@media (min-width: 990px) and (max-width: 1220px) {
+  .services-page__main-info {
+    margin-right: 0;
+    max-width: 100%;
+  }
+
+  .services-page__sidebar {
+    display: none;
+  }
+
+  .services-page__related-content_item {
+    width: 100%;
+
+    a {
+      width: 100%;
+    }
+  }
+}

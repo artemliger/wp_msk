@@ -1,0 +1,58 @@
+@media (min-width: 1px) and (max-width: 559px) {
+  .vacancies-page {
+    margin-top: 30px;
+  }
+
+  .vacancies-page__heading {
+    margin-bottom: 10px;
+    font-size: 20px;
+  }
+
+  .vacancies-page__main-item {
+    padding: 18px 20px;
+  }
+
+  .vacancies-page__main-item_head-title {
+    font-size: 16px;
+    line-height: 18px;
+    margin-bottom: 8px;
+  }
+
+  .vacancies-page__main-item_head-content {
+    flex-direction: column;
+  }
+
+  .vacancies-page__main-item-content p {
+    margin-bottom: 10px;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .vacancies-page__main-item-content ul li {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .vacancies-page__main-item_head-content-experience {
+    margin-right: 0;
+    margin-bottom: 5px;
+  }
+
+  .vacancies-page__main-item-content_footer {
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 20px;
+  }
+
+  .vacancies-page__main-item-content_footer-link {
+    margin-bottom: 3px;
+  }
+
+  .vacancies-page__main-item-content_footer-info-phone {
+    white-space: nowrap;
+  }
+
+  .vacancies-page__main-item_head::after {
+    font-size: 12px;
+  }
+}

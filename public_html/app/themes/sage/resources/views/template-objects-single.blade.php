@@ -52,7 +52,7 @@
         <div class="objects-single-page__related-content">
           @foreach($objects_single['objects_single_related'] as $objects_single_related)
             <div class="objects-single-page__related-content_item">
-              <a href="{!! get_permalink($objects_single_related['objects_single_related_item']) !!}">
+              <a href="{!! get_permalink($objects_single_related['objects_single_related_item']) !!}" class="objects-single-page__related-content_item-image-link">
                 <img src="{!! get_the_post_thumbnail_url($objects_single_related['objects_single_related_item']) !!}" alt="{!! get_the_title($objects_single_related['objects_single_related_item']) !!}" class="objects-single-page__related-content_item-image">
               </a>
               <div class="objects-single-page__related-content_item-wrapper">

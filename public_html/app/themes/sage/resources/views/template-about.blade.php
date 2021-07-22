@@ -9,41 +9,52 @@
   @php $about = get_field('about') @endphp
   <div class="about-page">
     <div class="about-page__main">
-      @if($about['about_heading'])
-        <h1 class="about-page__main-heading">{!! $about['about_heading'] !!}</h1>
-      @else
-        <h1 class="about-page__main-heading">{!! the_title(); !!}</h1>
-      @endif
+      <div class="about-page__main-wrapper">
+        <div class="about-page__main-wrapper-content">
+          @if($about['about_heading'])
+            <h1 class="about-page__main-heading">{!! $about['about_heading'] !!}</h1>
+          @else
+            <h1 class="about-page__main-heading">{!! the_title(); !!}</h1>
+          @endif
 
-      <div class="about-page__main-content">
-        {!! $about['about_content'] !!}
+          <div class="about-page__main-content">
+            {!! $about['about_content'] !!}
+          </div>
+        </div>
+        @if($about['about_image'])
+          <div class="about-page__main-image">
+            <img src="{!! $about['about_image'] !!}" alt="" class="about-page__main-image-img">
+          </div>
+        @endif
       </div>
 
-      <div class="about-page__main-doc">
-        @foreach($about['about_doc'] as $about_doc)
-          @if($about_doc['about_doc_file'])
-            <div class="about-page__main-doc-item">
-              <div class="about-page__main-doc-info">
-                <div class="about-page__main-doc-info-title">{!! $about_doc['about_doc_title'] !!}</div>
-                @if($about_doc['about_doc_subtitle'])
-                  <div class="about-page__main-doc-info-subtitle">{!! $about_doc['about_doc_subtitle'] !!}</div>
+      @if($about['about_doc'])
+        <div class="about-page__main-doc">
+          @foreach($about['about_doc'] as $about_doc)
+            @if($about_doc['about_doc_file'])
+              <div class="about-page__main-doc-item">
+                <div class="about-page__main-doc-info">
+                  <div class="about-page__main-doc-info-title">{!! $about_doc['about_doc_title'] !!}</div>
+                  @if($about_doc['about_doc_subtitle'])
+                    <div class="about-page__main-doc-info-subtitle">{!! $about_doc['about_doc_subtitle'] !!}</div>
+                  @endif
+                </div>
+                @if($about_doc['about_doc_file'])
+                  <a href="{!! $about_doc['about_doc_file'] !!}" class="about-page__main-doc-file-link" target="_blank">
+                    <div class="about-page__main-doc-file">
+                      @if($about_doc['about_doc_file_name'])
+                        {!! $about_doc['about_doc_file_name'] !!}
+                      @else
+                        Скачать файл
+                      @endif
+                    </div>
+                  </a>
                 @endif
               </div>
-              @if($about_doc['about_doc_file'])
-                <a href="{!! $about_doc['about_doc_file'] !!}" class="about-page__main-doc-file-link" target="_blank">
-                  <div class="about-page__main-doc-file">
-                    @if($about_doc['about_doc_file_name'])
-                      {!! $about_doc['about_doc_file_name'] !!}
-                    @else
-                      Скачать файл
-                    @endif
-                  </div>
-                </a>
-              @endif
-            </div>
-          @endif
-        @endforeach
-      </div>
+            @endif
+          @endforeach
+        </div>
+      @endif
     </div>
 
     <div class="about-page__advantages">

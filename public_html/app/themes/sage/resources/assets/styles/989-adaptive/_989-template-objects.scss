@@ -1,0 +1,75 @@
+@media (min-width: 560px) and (max-width: 989px) {
+  .objects-page__heading {
+    margin-top: 50px;
+    font-size: 26px;
+  }
+
+  .objects-page__main {
+    margin-top: 30px;
+  }
+
+  .objects-page__main-tabs-item {
+    margin-right: 20px;
+  }
+
+  .objects-page__main-content {
+    margin-top: 30px;
+  }
+
+  .objects-page__main-content_item {
+    width: calc((100% - 35px) / 2);
+    min-height: 450px;
+    margin-right: 35px;
+    margin-bottom: 30px;
+
+    &:nth-child(odd) {
+      margin-right: 35px;
+    }
+
+    &:nth-child(even) {
+      margin-right: 0;
+    }
+  }
+
+  .objects-page__main-content_item-image-link,
+  .objects-page__main-content_item-image {
+    height: 200px;
+  }
+
+  .objects-page__main-content_item-wrapper {
+    min-height: 250px;
+    padding: 22px 15px;
+  }
+
+  .objects-page__main-content_item-title {
+    font-size: 18px;
+    line-height: 20px;
+    margin-bottom: 10px;
+  }
+}
+
+@media (min-width: 560px) and (max-width: 768px) {
+  .objects-page__heading {
+    margin-top: 40px;
+    font-size: 22px;
+  }
+
+  .objects-page__main {
+    margin-top: 20px;
+  }
+
+  .objects-page__main-content {
+    margin-top: 20px;
+  }
+
+  .objects-page__main-content_item {
+    width: calc((100% - 25px) / 2);
+    min-height: 450px;
+    margin-right: 25px;
+    margin-bottom: 25px;
+
+    &:nth-child(odd) {
+      margin-right: 25px;
+    }
+  }
+}

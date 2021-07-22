@@ -33,7 +33,7 @@
       <div class="objects-page__main-content">
         @foreach($cards as $cards_item)
           <div class="objects-page__main-content_item" data-id="{!! $cards_item['objects_cards_id'] !!}">
-            <a href="{!! get_permalink($cards_item['objects_cards_item']) !!}" class="">
+            <a href="{!! get_permalink($cards_item['objects_cards_item']) !!}" class="objects-page__main-content_item-image-link">
               <img src="{!! get_the_post_thumbnail_url($cards_item['objects_cards_item']) !!}" alt="{!! get_the_title($cards_item['objects_cards_item']) !!}" class="objects-page__main-content_item-image">
             </a>
             <div class="objects-page__main-content_item-wrapper">
