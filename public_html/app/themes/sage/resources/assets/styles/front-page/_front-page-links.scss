@@ -59,9 +59,11 @@
       padding: 18px;
       z-index: 3;
 
+      /*
       &:active {
         color: #fff !important;
       }
+      */
     }
 
     &-title {
@@ -78,6 +80,13 @@
       font-size: 16px;
       line-height: 24px;
     }
+  }
+}
+
+.front-page__links-item-link:active {
+  .front-page__links-item-title,
+  .front-page__links-item-text {
+    color: #fff !important;
   }
 }
 
