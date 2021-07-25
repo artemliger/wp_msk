@@ -1,4 +1,5 @@
-.wpcf7 form.invalid .wpcf7-response-output,
-.wpcf7 form.unaccepted .wpcf7-response-output {
-  border: 2px solid $title !important;
+.banner__nav-primary-list li.menu-item.menu-item-has-children ul.sub-menu li.current-menu-item a {
+  &:hover {
+    color: #fff !important;
+  }
 }

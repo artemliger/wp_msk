@@ -157,6 +157,15 @@
     display: none;
     content: none;
   }
+
+  .modal__wrapper {
+    overflow-y: auto;
+  }
+
+  .modal__wrapper .modal__block {
+    margin: 5% auto 0;
+    height: auto;
+  }
 }
 
 @media (min-width: 1px) and (max-width: 399px) {

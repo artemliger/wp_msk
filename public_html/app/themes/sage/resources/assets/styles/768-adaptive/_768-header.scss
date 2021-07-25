@@ -21,11 +21,13 @@
   }
 
   .banner__nav-primary-list {
-    padding-top: 90px;
+    padding-top: 50px;
+    padding-bottom: 50px;
     padding-left: 40px;
     flex-direction: column;
     max-width: 100%;
     width: 100%;
+    min-height: 400px;
     align-items: start;
   }
 

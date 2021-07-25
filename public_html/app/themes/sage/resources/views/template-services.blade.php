@@ -21,6 +21,7 @@
         </div>
       </div>
 
+      @if($services['services_aside_heading'] || $services['services_aside'])
       <aside class="services-page__sidebar">
         <h3 class="services-page__sidebar-title">{!! $services['services_aside_heading'] !!}</h3>
         @if($services['services_aside'])
@@ -35,8 +36,10 @@
           </div>
         @endif
       </aside>
+      @endif
     </div>
 
+    @if($services['services_advantages_heading'] || $services['services_advantages'])
     <div class="services-page__advantages">
       <h2 class="services-page__advantages-title">{!! $services['services_advantages_heading'] !!}</h2>
       <div class="services-page__advantages-content">
@@ -48,6 +51,7 @@
         @endforeach
       </div>
     </div>
+    @endif
 
     @if($services['services_related_title'] || $services['services_related'])
       <div class="services-page__related">

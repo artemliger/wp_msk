@@ -21,11 +21,13 @@
   }
 
   .banner__nav-primary-list {
-    padding-top: 90px;
+    padding-top: 60px;
+    padding-bottom: 50px;
     padding-left: 40px;
     flex-direction: column;
     max-width: 100%;
     width: 100%;
+    min-height: 350px;
     align-items: start;
   }
 
@@ -108,5 +110,9 @@
         transform: rotate(45deg);
       }
     }
+  }
+
+  .banner__nav-primary-list li.menu-item.menu-item-has-children ul.sub-menu {
+    left: 30px;
   }
 }

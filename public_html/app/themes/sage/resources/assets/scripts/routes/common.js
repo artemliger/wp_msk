@@ -14,6 +14,7 @@ export default {
     this.newsPagination();
     this.scroll();
     this.test();
+    this.dropMenu();
     this.frontClientsSlider();
     this.serviceSlider();
     this.objectsSingleRelatedSlider();
@@ -54,7 +55,6 @@ export default {
 
   objectsPagination() {
     $('.objects-page__main-content').pagify(9, '.objects-page__main-content_item');
-    //$('.objects-page__main-content').pagify(3, '.objects-page__main-content_item');
   },
 
   objectsSingleSlider() {
@@ -212,6 +212,7 @@ export default {
   },
 
   scroll() {
+    /* //нужна доработка
     let $page = $('html, body');
     let hash = window.location.hash;
     window.scrollTo(0,420)
@@ -221,6 +222,8 @@ export default {
       }, 600);
       return false;
     });
+    */
+
     /*
     $('a[href*="#"]').click(function() {
       $page.animate({
@@ -232,6 +235,7 @@ export default {
   },
 
   test() {
+    /*
     $('.services-page__sidebar-content_item-link').each(function() {
       let myURL = $(this).attr('href'),
         pageURL = window.location.url;
@@ -239,9 +243,29 @@ export default {
         $(this).addClass('active');
       }
     })
+    */
+  },
+
+  dropMenu() {
+    if ($(window).width() < 1220) {
+      $('.banner__nav-primary-list > .menu-item-has-children > a').click(function(e) {
+        e.preventDefault();
+        //let href = $(this).attr('href');
+        if($(this).hasClass('active-sub-menu')){
+          $(this).siblings('.sub-menu').css('display','none');
+          //document.location.href = href;
+        } else {
+          $('.banner__nav-primary-list > .menu-item-has-children > a').removeClass('active-sub-menu');
+          $('.banner__nav-primary-list > .menu-item-has-children > .sub-menu').css('display','none');
+          $(this).addClass('active-sub-menu');
+          $(this).siblings('.sub-menu').css('display','flex');
+        }
+      })
+    }
   },
 
   frontClientsSlider() {
+    /*
     var context = $('.front-page__partners-content');
 
     if ($(window).width() >= 989 && $(window).width() < 1160) {
@@ -316,6 +340,57 @@ export default {
         callSlider();
       }
     })
+    */
+
+    let slider4 = $('.front-page__partners-content');
+
+    function callSlider() {
+      if (slider4.children().length >= 0) {
+        slider4.addClass('owl-carousel')
+          .owlCarousel({
+            center: false,
+            loop: true,
+            margin: 0,
+            nav: false,
+            dots: false,
+            items: 1,
+            autoplay: true,
+            autoplayTimeout: 8000,
+            autoplayHoverPause: false,
+            autoplaySpeed: 2000,
+            navSpeed: 2000,
+            mouseDrag: true,
+            touchDrag: true,
+            responsive: {
+              0: {
+                items: 2,
+              },
+              560: {
+                items: 3,
+              },
+              768: {
+                items: 4,
+              },
+              989: {
+                items: 5,
+              },
+            },
+          })
+      }
+    }
+
+    $(window).resize(function () {
+      if ($(window).width() <= 1160) {
+        callSlider();
+      } else {
+        slider4.removeClass('owl-carousel')
+          .trigger('destroy.owl.carousel');
+      }
+    });
+
+    if ($(window).width() <= 1160) {
+      callSlider();
+    }
   },
 
   serviceSlider() {

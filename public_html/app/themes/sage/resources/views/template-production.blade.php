@@ -21,6 +21,7 @@
         </div>
       </div>
 
+      @if($production['production_aside_heading'] || $production['production_aside'])
       <aside class="production-page__sidebar">
         <h3 class="production-page__sidebar-title">{!! $production['production_aside_heading'] !!}</h3>
         @if($production['production_aside'])
@@ -35,6 +36,7 @@
           </div>
         @endif
       </aside>
+      @endif
     </div>
 
     @if($production['production_price_heading'] || $production['production_price'])

@@ -58,7 +58,8 @@
         flex-direction: column;
         justify-content: flex-start;
         align-items: flex-start;
-        width: calc((100% - 74px) / 3);
+        //width: calc((100% - 74px) / 3);
+        width: calc((100% - 111px) / 3);
         min-height: 480px;
         margin-right: 37px;
         margin-bottom: 37px;
@@ -72,7 +73,7 @@
         }
 
         &:nth-child(3n) {
-          margin-right: 0;
+          //margin-right: 0;
         }
 
         &-image-link {
