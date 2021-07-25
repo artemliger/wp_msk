@@ -1,0 +1,56 @@
+@media (min-width: 1px) and (max-width: 559px) {
+  .post-page {
+    margin-top: 30px;
+    margin-bottom: -30px;
+  }
+
+  .post-page__title {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  .post-page__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    column-count: auto;
+    column-gap: normal;
+  }
+
+  .post-page__list-item {
+    margin-bottom: 30px;
+  }
+
+  .post-page__list-item:nth-child(odd) {
+    margin-right: 0;
+  }
+
+  .post-page__list-item-title {
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 10px;
+  }
+
+  .post-page__list-item-text {
+    margin-top: 10px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .post-page__list-item-image {
+    height: 185px;
+    margin-top: 10px;
+  }
+
+  .post-page__list-item-date {
+    font-size: 12px;
+    line-height: 20px;
+  }
+
+  .post-page__list-item-more {
+    font-size: 12px;
+    line-height: 20px;
+  }
+}

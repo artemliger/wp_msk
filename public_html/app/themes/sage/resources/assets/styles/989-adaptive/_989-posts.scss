@@ -1,0 +1,30 @@
+@media (min-width: 769px) and (max-width: 989px) {
+  .blog-page {
+    margin-top: 50px;
+  }
+
+  .blog-page__title {
+    font-size: 26px;
+    margin-bottom: 30px;
+  }
+
+  .blog-page__content {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .blog-page__content-text {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    order: 2;
+  }
+
+  .blog-page__content-image {
+    display: flex;
+    margin-left: 0;
+    margin-bottom: 20px;
+    height: 225px;
+    order: 1;
+  }
+}

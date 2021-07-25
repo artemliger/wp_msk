@@ -10,6 +10,7 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    padding: 0;
   }
 
   .content-info__footer-head-button {
@@ -149,5 +150,18 @@
 
   .content-info__footer-bottom-copyright {
     margin-bottom: 10px;
+  }
+
+  .content-info__footer-head .bell-modal::after,
+  .content-info__footer-head .request-modal::after {
+    display: none;
+    content: none;
+  }
+}
+
+@media (min-width: 1px) and (max-width: 399px) {
+  .modal__wrapper .modal__block .wpcf7 .wpcf7-form__footer .wpcf7-form-wrapper-checkbox a {
+    top: 20px;
+    left: 25px;
   }
 }

@@ -29,7 +29,7 @@
   }
 
   .front-page__banner-item-slider .owl-nav button.owl-prev {
-    display: block;
+    display: block !important;
     left: 5%;
     background: url("../images/svg/next.svg") no-repeat center center;
     transform: rotateY(180deg);

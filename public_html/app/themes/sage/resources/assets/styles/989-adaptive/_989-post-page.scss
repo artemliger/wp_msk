@@ -1,0 +1,24 @@
+@media (min-width: 769px) and (max-width: 989px) {
+  .post-page {
+    margin-top: 50px;
+  }
+
+  .post-page__title {
+    font-size: 26px;
+    margin-bottom: 30px;
+  }
+
+  .post-page__list-item {
+    margin-bottom: 50px;
+  }
+
+  .post-page__list-item-title {
+    font-size: 20px;
+    line-height: 22px;
+    margin-bottom: 12px;
+  }
+
+  .post-page__list-item-image {
+    height: 235px;
+  }
+}

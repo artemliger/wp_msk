@@ -121,6 +121,10 @@
       }
     }
   }
+
+  .banner__nav-primary-list li.menu-item.menu-item-has-children ul.sub-menu {
+    left: 30px;
+  }
 }
 
 @media (min-width: 1px) and (max-width: 439px) {

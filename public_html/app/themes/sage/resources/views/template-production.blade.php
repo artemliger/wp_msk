@@ -37,6 +37,7 @@
       </aside>
     </div>
 
+    @if($production['production_price_heading'] || $production['production_price'])
     <div id="price" class="production-page__price">
       <h3 class="production-page__price-title">{!! $production['production_price_heading'] !!}</h3>
       <div class="production-page__price-content">
@@ -80,7 +81,9 @@
         @endif
       </div>
     </div>
+    @endif
 
+    @if($production['production_product_heading'] || $production['production_product_gallery'])
     <div class="production-page__product">
       <h3 class="production-page__product-title">{!! $production['production_product_heading'] !!}</h3>
       @if($production['production_product_gallery'] )
@@ -96,6 +99,7 @@
       </div>
       @endif
     </div>
+    @endif
   </div>
   @endwhile
 @endsection

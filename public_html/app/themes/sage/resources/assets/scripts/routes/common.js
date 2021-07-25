@@ -212,8 +212,16 @@ export default {
   },
 
   scroll() {
-    /*
     let $page = $('html, body');
+    let hash = window.location.hash;
+    window.scrollTo(0,420)
+    if(hash !== '') $('a[href^='+hash+']').click(function() {
+      $page.animate({
+        scrollTop: $($.attr(this, 'href')).offset().top - 150,
+      }, 600);
+      return false;
+    });
+    /*
     $('a[href*="#"]').click(function() {
       $page.animate({
         scrollTop: $($.attr(this, 'href')).offset().top - 150,
@@ -224,30 +232,31 @@ export default {
   },
 
   test() {
-    let item = '.services-page__sidebar-content_item-link';
-
-    $(item).click(function () {
-      $(this).addClass('item--active');
-      //$(item).removeClass('item--active');
-    });
+    $('.services-page__sidebar-content_item-link').each(function() {
+      let myURL = $(this).attr('href'),
+        pageURL = window.location.url;
+      if(myURL === pageURL) {
+        $(this).addClass('active');
+      }
+    })
   },
 
   frontClientsSlider() {
     var context = $('.front-page__partners-content');
 
-    if ($(window).width() >= 992 && $(window).width() < 1160) {
+    if ($(window).width() >= 989 && $(window).width() < 1160) {
       while( context.children('div:not(.front-page__partners-content-list)' ).length) {
         context.children('div:not(.front-page__partners-content-list):lt(6)').wrapAll('<div class="front-page__partners-content-list">');
       }
-    } else if ($(window).width() >= 768 && $(window).width() < 992) {
+    } else if ($(window).width() >= 768 && $(window).width() < 989) {
+      while( context.children('div:not(.front-page__partners-content-list)' ).length){
+        context.children('div:not(.front-page__partners-content-list):lt(6)').wrapAll('<div class="front-page__partners-content-list">');
+      }
+    } else if($(window).width() >= 560 && $(window).width() < 768) {
       while( context.children('div:not(.front-page__partners-content-list)' ).length){
         context.children('div:not(.front-page__partners-content-list):lt(4)').wrapAll('<div class="front-page__partners-content-list">');
       }
-    } else if($(window).width() >= 559 && $(window).width() < 768) {
-      while( context.children('div:not(.front-page__partners-content-list)' ).length){
-        context.children('div:not(.front-page__partners-content-list):lt(4)').wrapAll('<div class="front-page__partners-content-list">');
-      }
-    } else if($(window).width() >= 0 && $(window).width() < 559) {
+    } else if($(window).width() >= 0 && $(window).width() < 560) {
       while( context.children('div:not(.front-page__partners-content-list)' ).length){
         context.children('div:not(.front-page__partners-content-list):lt(4)').wrapAll('<div class="front-page__partners-content-list">');
       }

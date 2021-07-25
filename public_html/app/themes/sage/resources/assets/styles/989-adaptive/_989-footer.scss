@@ -5,6 +5,10 @@
     padding-bottom: 35px;
   }
 
+  .content-info__footer-head {
+    padding: 0;
+  }
+
   .content-info__footer-contacts {
     margin-top: 30px;
   }
@@ -17,5 +21,11 @@
 
   .content-info__footer-bottom-copyright {
     margin-bottom: 10px;
+  }
+
+  .content-info__footer-head .bell-modal::after,
+  .content-info__footer-head .request-modal::after {
+    display: none;
+    content: none;
   }
 }

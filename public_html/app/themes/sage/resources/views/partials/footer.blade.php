@@ -51,3 +51,31 @@
     {!! do_shortcode('[contact-form-7 id="227" title="Форма | Оставьте заявку"]') !!}
   </div>
 </div>
+
+<script async defer>
+  /*
+  document.body.scrollTop = 0;
+
+  let window.scrolled = false;
+  $(document).one('ready scroll hashchange', function(e) {
+    if(window.scrolled != false || location.hash.length == 0) return;
+
+    e.preventDefault();
+
+    let name = location.hash.substr(1);
+    let el = $('#'+name+', [name='+name+']');
+
+    console.log(el);
+
+    if(el.size()>0)
+    {
+      $('body, html').animate({
+        scrollTop: el.offset().top
+      }, 3000);
+
+      window.scrolled = true;
+    }
+
+  });
+  */
+</script>
