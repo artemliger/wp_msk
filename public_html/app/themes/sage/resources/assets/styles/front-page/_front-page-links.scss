@@ -34,7 +34,8 @@
       z-index: 1;
     }
 
-    &:hover {
+    &:hover,
+    &:active {
       transform: scale(1.07);
       background: linear-gradient(0deg, $main, $main);
       border: none;

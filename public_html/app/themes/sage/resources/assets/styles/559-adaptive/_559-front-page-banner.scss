@@ -22,6 +22,7 @@
 
   .front-page__banner-item-slider .owl-nav button {
     top: calc(100% - 106px);
+    display: none !important;
   }
 
   .front-page__banner-item-slider .owl-nav button.owl-next {
@@ -29,7 +30,7 @@
   }
 
   .front-page__banner-item-slider .owl-nav button.owl-prev {
-    display: block !important;
+    display: block;
     left: 5%;
     background: url("../images/svg/next.svg") no-repeat center center;
     transform: rotateY(180deg);
