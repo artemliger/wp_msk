@@ -84,7 +84,8 @@
   }
 }
 
-.front-page__links-item-link:active {
+.front-page__links-item-link:active,
+.front-page__links-item-link:focus {
   .front-page__links-item-title,
   .front-page__links-item-text {
     color: #fff !important;

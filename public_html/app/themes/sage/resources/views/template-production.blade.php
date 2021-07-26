@@ -21,22 +21,18 @@
         </div>
       </div>
 
-      @if($production['production_aside_heading'] || $production['production_aside'])
       <aside class="production-page__sidebar">
-        <h3 class="production-page__sidebar-title">{!! $production['production_aside_heading'] !!}</h3>
-        @if($production['production_aside'])
-          <div class="production-page__sidebar-content">
-            @foreach($production['production_aside'] as $production_aside_item)
-              <a href="{!! get_permalink($production_aside_item['production_aside_link']) !!}" class="production-page__sidebar-content_item-link">
-                <div class="production-page__sidebar-content_item">
-                  {!! get_the_title($production_aside_item['production_aside_link']) !!}
-                </div>
-              </a>
-            @endforeach
-          </div>
+        @if($production['production_aside_heading'])
+          <h3 class="production-page__sidebar-title">{!! $production['production_aside_heading'] !!}</h3>
+        @else
+          <h3 class="production-page__sidebar-title">Наша продукция:</h3>
         @endif
+        <div class="production-page__sidebar-content">
+          @if (has_nav_menu('footer_navigation_product'))
+            {!! wp_nav_menu(['theme_location' => 'footer_navigation_product', 'menu_class' => 'footer__nav-list production-page__sidebar-nav-list']) !!}
+          @endif
+        </div>
       </aside>
-      @endif
     </div>
 
     @if($production['production_price_heading'] || $production['production_price'])

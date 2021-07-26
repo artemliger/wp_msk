@@ -21,22 +21,19 @@
         </div>
       </div>
 
-      @if($services['services_aside_heading'] || $services['services_aside'])
       <aside class="services-page__sidebar">
-        <h3 class="services-page__sidebar-title">{!! $services['services_aside_heading'] !!}</h3>
-        @if($services['services_aside'])
-          <div class="services-page__sidebar-content">
-            @foreach($services['services_aside'] as $services_aside_item)
-              <a href="{!! get_permalink($services_aside_item['services_aside_link']) !!}" class="services-page__sidebar-content_item-link">
-                <div class="services-page__sidebar-content_item">
-                  {!! get_the_title($services_aside_item['services_aside_link']) !!}
-                </div>
-              </a>
-            @endforeach
-          </div>
+        @if($services['services_aside_heading'])
+          <h3 class="services-page__sidebar-title">{!! $services['services_aside_heading'] !!}</h3>
+        @else
+          <h3 class="services-page__sidebar-title">Наши услуги:</h3>
         @endif
+
+        <div class="services-page__sidebar-content">
+          @if (has_nav_menu('footer_navigation_service'))
+            {!! wp_nav_menu(['theme_location' => 'footer_navigation_service', 'menu_class' => 'footer__nav-list services-page__sidebar-nav-list']) !!}
+          @endif
+        </div>
       </aside>
-      @endif
     </div>
 
     @if($services['services_advantages_heading'] || $services['services_advantages'])
