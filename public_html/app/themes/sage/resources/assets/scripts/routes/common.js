@@ -344,41 +344,40 @@ export default {
 
     let slider4 = $('.front-page__partners-content');
 
-    function callSlider() {
-      if (slider4.children().length >= 0) {
-        slider4.addClass('owl-carousel')
-          .owlCarousel({
-            center: false,
-            loop: true,
-            margin: 0,
-            nav: false,
-            dots: false,
-            items: 1,
-            autoplay: true,
-            autoplayTimeout: 8000,
-            autoplayHoverPause: false,
-            autoplaySpeed: 2000,
-            navSpeed: 2000,
-            mouseDrag: true,
-            touchDrag: true,
-            responsive: {
-              0: {
-                items: 2,
-              },
-              560: {
-                items: 3,
-              },
-              768: {
-                items: 4,
-              },
-              989: {
-                items: 5,
-              },
+    if (slider4.children().length >= 11) {
+      slider4.addClass('owl-carousel')
+        .owlCarousel({
+          center: false,
+          loop: true,
+          margin: 0,
+          nav: false,
+          dots: false,
+          items: 1,
+          autoplay: true,
+          autoplayTimeout: 8000,
+          autoplayHoverPause: false,
+          autoplaySpeed: 2000,
+          navSpeed: 2000,
+          mouseDrag: true,
+          touchDrag: true,
+          responsive: {
+            0: {
+              items: 2,
             },
-          })
-      }
+            560: {
+              items: 3,
+            },
+            768: {
+              items: 4,
+            },
+            989: {
+              items: 5,
+            },
+          },
+        })
     }
 
+    /*
     $(window).resize(function () {
       if ($(window).width() <= 1160) {
         callSlider();
@@ -391,6 +390,7 @@ export default {
     if ($(window).width() <= 1160) {
       callSlider();
     }
+    */
   },
 
   serviceSlider() {
