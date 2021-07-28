@@ -22,30 +22,11 @@
             </a>
           </div>
           <div class="contact-page__info-content-main contact-page__info-content-main-phones">
-            <div class="contact-page__info-content-main-title">Отдел продаж:</div>
+            <div class="contact-page__info-content-main-title">Офис:</div>
             <div class="contact-page__info-content-main-phones-wrapper">
               @php
-                $phone = "+7 (495) 745-75-31";
-                $phone1 = "+7 (495) 690-10-06";
-                $phone2 = "+7 (495) 690-44-73";
-                $phone3 = "+7 (917) 500-33-40";
-                $phoneNumb = str_replace(array(' ', '(', ')', '-'), '', $phone);
-                $phoneNumb1 = str_replace(array(' ', '(', ')', '-'), '', $phone1);
-                $phoneNumb2 = str_replace(array(' ', '(', ')', '-'), '', $phone2);
-                $phoneNumb3 = str_replace(array(' ', '(', ')', '-'), '', $phone3);
-              @endphp
-              <a href="tel:{!! $phoneNumb !!}" class="contact-page__info-content-main-phone">{!! $phone !!}</a>
-              <a href="tel:{!! $phoneNumb1 !!}" class="contact-page__info-content-main-phone">{!! $phone1 !!}</a>
-              <a href="tel:{!! $phoneNumb2 !!}" class="contact-page__info-content-main-phone">{!! $phone2 !!}</a>
-              <a href="tel:{!! $phoneNumb3 !!}" class="contact-page__info-content-main-phone">{!! $phone3 !!}</a>
-            </div>
-          </div>
-          <div class="contact-page__info-content-main contact-page__info-content-main-phones">
-            <div class="contact-page__info-content-main-title">Секретарь:</div>
-            <div class="contact-page__info-content-main-phones-wrapper">
-              @php
-                $phone4 = "+7 (495) 690-10-06";
-                $phone5 = "+7 (495) 690-44-73 ";
+                $phone4 = "+7 (495) 609-97-96";
+                $phone5 = "+7 (917) 500-33-40 ";
                 $phoneNumb4 = str_replace(array(' ', '(', ')', '-'), '', $phone4);
                 $phoneNumb5 = str_replace(array(' ', '(', ')', '-'), '', $phone5);
               @endphp
