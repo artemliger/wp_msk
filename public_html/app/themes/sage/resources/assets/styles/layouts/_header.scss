@@ -16,7 +16,21 @@
     height: inherit;
 
     &-logo {
-      margin-right: 48px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin-right: 20px;
+      max-width: 205px;
+      width: 100%;
+
+      &-title {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 10px;
+        line-height: 10px;
+        color: #9b9999;
+        margin-left: 5px;
+      }
     }
   }
 
@@ -47,7 +61,7 @@
         align-items: center;
         white-space: nowrap;
         min-height: 32px;
-        margin-right: 34px;
+        margin-right: 20px;
 
         &:last-child {
           margin-right: 0;
@@ -140,9 +154,10 @@
     justify-content: flex-end;
     align-items: center;
     width: 100%;
+    margin-left: 20px;
 
     &-contact {
-      margin-right: 46px;
+      margin-right: 29px;
 
       &_phone {
         font-style: normal;

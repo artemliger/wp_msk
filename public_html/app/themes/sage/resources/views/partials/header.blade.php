@@ -2,6 +2,9 @@
   <div class="banner__header">
     <a class="banner__header-logo" href="{{ home_url('/') }}">
       <img src="{!! get_field('logo', 'options') !!}" class="banner__header-logo-img" alt="{!! the_title() !!}">
+      @if(get_field('logo_title', 'options'))
+        <h3 class="banner__header-logo-title">{!! get_field('logo_title', 'options') !!}</h3>
+      @endif
     </a>
 
     <nav class="banner__nav-primary">

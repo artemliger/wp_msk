@@ -128,7 +128,7 @@ export default {
         dots: false,
         items: 3,
         autoplay: true,
-        autoplayTimeout: 7500,
+        autoplayTimeout: 4500,
         autoplayHoverPause: false,
         autoHeight: false,
         autoplaySpeed: 1000,
