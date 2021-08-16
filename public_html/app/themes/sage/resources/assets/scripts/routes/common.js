@@ -127,7 +127,7 @@ export default {
         nav: true,
         dots: false,
         items: 3,
-        autoplay: false,
+        autoplay: true,
         autoplayTimeout: 7500,
         autoplayHoverPause: false,
         autoHeight: false,
@@ -153,6 +153,19 @@ export default {
       });
 
     $('.production-page__product-item-image img').magnificPopup({
+      type: 'image',
+      gallery: {
+        enabled: true,
+        tCounter: '%curr% из %total%',
+      },
+      callbacks: {
+        elementParse: function (qw) {
+          qw.src = qw.el.attr('src');
+        },
+      },
+    });
+
+    $('.services-page__gallery-item-image img').magnificPopup({
       type: 'image',
       gallery: {
         enabled: true,

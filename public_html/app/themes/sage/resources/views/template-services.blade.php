@@ -50,6 +50,64 @@
     </div>
     @endif
 
+    @if($services['services_gallery'] )
+      <div class="services-page__gallery">
+        @foreach($services['services_gallery'] as $services_gallery_item)
+          <div class="services-page__gallery-item">
+            <div class="services-page__gallery-item-image">
+              <img src="{!! $services_gallery_item['services_gallery_image'] !!}" alt="" class="services-page__gallery-item-image-img">
+            </div>
+          </div>
+        @endforeach
+      </div>
+    @endif
+
+    @if($services['services_price_heading'] || $services['services_price'])
+      <div id="price" class="production-page__price">
+        <h3 class="production-page__price-title">{!! $services['services_price_heading'] !!}</h3>
+        <div class="production-page__price-content">
+          @if($services['services_price'])
+            <div class="production-page__price-tabs">
+              @foreach($services['services_price'] as $services_item_tabs)
+                @if (!$services_item_tabs['services_price_tabs'] == [])
+                  <div class="production-page__price-tabs-item" data-name="{!! $services_item_tabs['services_price_tabs'] !!}">
+                    {!! $services_item_tabs['services_price_tabs'] !!}
+                  </div>
+                @endif
+              @endforeach
+            </div>
+          @endif
+
+          @if($services['services_price'])
+            <div class="production-page__price-table-wrapper">
+              @foreach($services['services_price'] as $services_table)
+                <div class="production-page__price-table" data-name="{!! $services_table['services_price_tabs'] !!}">
+                  <div class="production-page__price-table-title_row">
+                    <span class="production-page__price-table-title_row-depth production-page__price-table-title_row-item">Толщина материала</span>
+                    <span class="production-page__price-table-title_row-value-99 production-page__price-table-title_row-item">До 100 м.п</span>
+                    <span class="production-page__price-table-title_row-value-499 production-page__price-table-title_row-item">100-500 м.п</span>
+                    <span class="production-page__price-table-title_row-value-999 production-page__price-table-title_row-item">500-1000 м.п</span>
+                    <span class="production-page__price-table-title_row-value-1001 production-page__price-table-title_row-item">св. 1000 м.п</span>
+                  </div>
+                  <div class="production-page__price-table-content">
+                    @foreach($services_table['services_table_row'] as $services_table_row)
+                      <div class="production-page__price-table_row">
+                        <span class="production-page__price-table_row-depth production-page__price-table_row-item">{!! $services_table_row['services_table_row_name'] !!}</span>
+                        <span class="production-page__price-table_row-value-99 production-page__price-table_row-item">{!! $services_table_row['services_table_row_value_99'] !!}</span>
+                        <span class="production-page__price-table_row-value-499 production-page__price-table_row-item">{!! $services_table_row['services_table_row_value_499'] !!}</span>
+                        <span class="production-page__price-table_row-value-999 production-page__price-table_row-item">{!! $services_table_row['services_table_row_value_999'] !!}</span>
+                        <span class="production-page__price-table_row-value-1001 production-page__price-table_row-item">{!! $services_table_row['services_table_row_value_1001'] !!}</span>
+                      </div>
+                    @endforeach
+                  </div>
+                </div>
+              @endforeach
+            </div>
+          @endif
+        </div>
+      </div>
+    @endif
+
     @if($services['services_related_title'] || $services['services_related'])
       <div class="services-page__related">
         <h2 class="services-page__related-title">{!! $services['services_related_title'] !!}</h2>

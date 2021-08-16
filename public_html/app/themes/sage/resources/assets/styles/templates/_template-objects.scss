@@ -128,8 +128,26 @@
           }
         }
 
+        &-year {
+          position: relative;
+          font-style: normal;
+          font-weight: 600;
+          font-size: 14px;
+          line-height: 24px;
+          padding-left: 22px;
+          margin-top: 5px;
+
+          &::before {
+            position: absolute;
+            content: url("../images/svg/date.svg");
+            top: 2px;
+            left: 0;
+          }
+        }
+
         &-text {
           margin-top: 12px;
+          margin-bottom: 8px;
           font-style: normal;
           font-weight: normal;
           font-size: 16px;

@@ -43,6 +43,9 @@
               @if($cards_item['objects_cards_city'])
                 <div class="objects-page__main-content_item-city">{!! $cards_item['objects_cards_city'] !!}</div>
               @endif
+              @if($cards_item['objects_cards_year'])
+                <div class="objects-page__main-content_item-year">{!! $cards_item['objects_cards_year'] !!}</div>
+              @endif
               <div class="objects-page__main-content_item-text">{!! get_the_excerpt($cards_item['objects_cards_item']) !!}</div>
               <a href="{!! get_permalink($cards_item['objects_cards_item']) !!}" class="objects-page__main-content_item-link">Подробнее</a>
             </div>

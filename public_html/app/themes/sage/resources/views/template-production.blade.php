@@ -35,6 +35,18 @@
       </aside>
     </div>
 
+    @if($production['production_gallery'] )
+      <div class="services-page__gallery">
+        @foreach($production['production_gallery'] as $production_gallery_item)
+          <div class="services-page__gallery-item">
+            <div class="services-page__gallery-item-image">
+              <img src="{!! $production_gallery_item['production_gallery_image'] !!}" alt="" class="services-page__gallery-item-image-img">
+            </div>
+          </div>
+        @endforeach
+      </div>
+    @endif
+
     @if($production['production_price_heading'] || $production['production_price'])
     <div id="price" class="production-page__price">
       <h3 class="production-page__price-title">{!! $production['production_price_heading'] !!}</h3>

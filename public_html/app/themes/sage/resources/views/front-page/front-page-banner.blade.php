@@ -3,6 +3,9 @@
 <div class="front-page__banner">
   <div class="front-page__banner-item">
     <div class="front-page__banner-item-content full-width-outside">
+      @if($banner['banner_headtitle'])
+        <div class="front-page__banner-item-content-headtitle">{!! $banner['banner_headtitle'] !!}</div>
+      @endif
       <h1 class="front-page__banner-item-content-title">
         {!! $banner['banner_heading'] !!}
         @if($banner['banner_heading_emit'])

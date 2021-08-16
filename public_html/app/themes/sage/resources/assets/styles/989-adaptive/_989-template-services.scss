@@ -37,6 +37,12 @@
     margin-right: 25px;
   }
 
+  .services-page__gallery-item {
+    width: calc((100% - 40px) / 3);
+    margin-right: 20px;
+    margin-bottom: 20px;
+  }
+
   .services-page__related-title {
     font-size: 26px;
   }

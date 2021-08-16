@@ -113,9 +113,14 @@
     margin-bottom: 10px;
   }
 
-  .objects-page__main-content_item-city {
+  .objects-page__main-content_item-city,
+  .objects-page__main-content_item-year {
     font-size: 12px;
     line-height: 20px;
+  }
+
+  .objects-page__main-content_item-year::before {
+    top: 1px;
   }
 
   .objects-page__main-content_item-link {

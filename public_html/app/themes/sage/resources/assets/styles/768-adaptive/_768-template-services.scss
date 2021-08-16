@@ -39,6 +39,24 @@
     font-size: 30px;
   }
 
+  .services-page__gallery-item {
+    width: calc((100% - 20px) / 2);
+    margin-right: 20px;
+    margin-bottom: 20px;
+
+    &:nth-child(odd) {
+      margin-right: 20px;
+    }
+
+    &:nth-child(even) {
+      margin-right: 0;
+    }
+  }
+
+  .services-page__gallery-item-image {
+    height: 200px;
+  }
+
   .services-page__related-title {
     font-size: 22px;
   }
