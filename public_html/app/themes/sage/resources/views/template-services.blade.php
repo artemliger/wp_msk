@@ -124,6 +124,9 @@
                 @if($services_related['services_related_city'])
                   <div class="services-page__related-content_item-city">{!! $services_related['services_related_city'] !!}</div>
                 @endif
+                @if($services_related['services_related_year'])
+                  <div class="objects-page__main-content_item-year">{!! $services_related['services_related_year'] !!}</div>
+                @endif
                 <div class="services-page__related-content_item-text">{!! get_the_excerpt($services_related['services_related_item']) !!}</div>
                 <a href="{!! get_permalink($services_related['services_related_item']) !!}" class="services-page__related-content_item-link">Подробнее</a>
               </div>
