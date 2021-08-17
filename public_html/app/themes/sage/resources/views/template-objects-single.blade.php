@@ -62,6 +62,9 @@
                 @if($objects_single_related['objects_single_related_city'])
                   <div class="objects-single-page__related-content_item-city">{!! $objects_single_related['objects_single_related_city'] !!}</div>
                 @endif
+                @if($objects_single_related['objects_single_related_year'])
+                  <div class="objects-page__main-content_item-year">{!! $objects_single_related['objects_single_related_year'] !!}</div>
+                @endif
                 <div class="objects-single-page__related-content_item-text">{!! get_the_excerpt($objects_single_related['objects_single_related_item']) !!}</div>
                 <a href="{!! get_permalink($objects_single_related['objects_single_related_item']) !!}" class="objects-single-page__related-content_item-link">Подробнее</a>
               </div>
