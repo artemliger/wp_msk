@@ -263,10 +263,10 @@ export default {
     if ($(window).width() < 1220) {
       $('.banner__nav-primary-list > .menu-item-has-children > a').click(function(e) {
         e.preventDefault();
-        //let href = $(this).attr('href');
+        let href = $(this).attr('href');
         if($(this).hasClass('active-sub-menu')){
           $(this).siblings('.sub-menu').css('display','none');
-          //document.location.href = href;
+          document.location.href = href;
         } else {
           $('.banner__nav-primary-list > .menu-item-has-children > a').removeClass('active-sub-menu');
           $('.banner__nav-primary-list > .menu-item-has-children > .sub-menu').css('display','none');

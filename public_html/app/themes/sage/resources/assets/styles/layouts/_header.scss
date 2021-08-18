@@ -121,7 +121,7 @@
 
               a {
                 padding: 6px 8px;
-                color: $text;
+                color: $text !important;
                 width: 100%;
                 font-size: 14px;
                 line-height: 14px;
@@ -131,7 +131,7 @@
                 background-color: $light;
 
                 a {
-                  color: #fff;
+                  color: #fff !important;
                 }
               }
             }
