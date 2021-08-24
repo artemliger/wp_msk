@@ -278,8 +278,7 @@ export default {
   },
 
   frontClientsSlider() {
-    /*
-    var context = $('.front-page__partners-content');
+    /*var context = $('.front-page__partners-content');
 
     if ($(window).width() >= 989 && $(window).width() < 1160) {
       while( context.children('div:not(.front-page__partners-content-list)' ).length) {
@@ -352,12 +351,11 @@ export default {
       if ($(window).width() <= 1160) {
         callSlider();
       }
-    })
-    */
+    })*/
 
     let slider4 = $('.front-page__partners-content');
 
-    if (slider4.children().length >= 11) {
+    if (slider4.children().length >= 10) {
       slider4.addClass('owl-carousel')
         .owlCarousel({
           center: false,
@@ -390,20 +388,18 @@ export default {
         })
     }
 
-    /*
     $(window).resize(function () {
       if ($(window).width() <= 1160) {
-        callSlider();
+        slider4.addClass('owl-carousel')
       } else {
         slider4.removeClass('owl-carousel')
           .trigger('destroy.owl.carousel');
       }
     });
 
-    if ($(window).width() <= 1160) {
+    /*if ($(window).width() <= 1160) {
       callSlider();
-    }
-    */
+    }*/
   },
 
   serviceSlider() {
