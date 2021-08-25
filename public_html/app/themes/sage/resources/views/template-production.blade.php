@@ -35,6 +35,16 @@
       </aside>
     </div>
 
+    @if($production['production_video'] )
+      <div class="services-page__video">
+        @foreach($production['production_video'] as $production_video_item)
+          <div class="services-page__video-item">
+            {!! $production_video_item['production_video_item'] !!}
+          </div>
+        @endforeach
+      </div>
+    @endif
+
     @if($production['production_gallery'] )
       <div class="services-page__gallery">
         @foreach($production['production_gallery'] as $production_gallery_item)

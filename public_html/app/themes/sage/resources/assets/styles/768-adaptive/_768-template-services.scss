@@ -39,6 +39,11 @@
     font-size: 30px;
   }
 
+  .services-page__video-item {
+    height: 200px;
+  }
+
+  .services-page__video-item,
   .services-page__gallery-item {
     width: calc((100% - 20px) / 2);
     margin-right: 20px;

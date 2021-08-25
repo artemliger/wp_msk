@@ -36,6 +36,16 @@
       </aside>
     </div>
 
+    @if($services['services_video'] )
+      <div class="services-page__video">
+        @foreach($services['services_video'] as $services_video_item)
+          <div class="services-page__video-item">
+            {!! $services_video_item['services_video_item'] !!}
+          </div>
+        @endforeach
+      </div>
+    @endif
+
     @if($services['services_advantages_heading'] || $services['services_advantages'])
     <div class="services-page__advantages">
       <h2 class="services-page__advantages-title">{!! $services['services_advantages_heading'] !!}</h2>

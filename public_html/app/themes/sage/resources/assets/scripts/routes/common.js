@@ -77,6 +77,19 @@ export default {
         touchDrag: true,
       });
 
+    $('.objects-single-page__main-slider-item').magnificPopup({
+      type: 'image',
+      gallery: {
+        enabled: true,
+        tCounter: '%curr% из %total%',
+      },
+      callbacks: {
+        elementParse: function (qw) {
+          qw.src = qw.el.attr('src');
+        },
+      },
+    });
+
     $('.owl-carousel').on('initialized.owl.carousel changed.owl.carousel', function(e) {
       //if (!e.namespace || e.property.name != 'position') return
       $('.owl-dots').text(e.relatedTarget.relative(e.item.index) + 1 + '/' + e.item.count)

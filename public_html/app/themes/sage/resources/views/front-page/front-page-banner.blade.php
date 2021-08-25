@@ -16,7 +16,7 @@
     </div>
     <div class="front-page__banner-item-slider">
       @foreach($banner['banner_item'] as $banner_item)
-        <div class="front-page__banner-item-slider-pic" style="background: url({!! $banner_item['banner_item_image'] !!}) no-repeat center top / cover"></div>
+        <div class="front-page__banner-item-slider-pic" style="background: url({!! $banner_item['banner_item_image'] !!}) no-repeat center center / cover"></div>
       @endforeach
     </div>
   </div>
