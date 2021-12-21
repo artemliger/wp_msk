@@ -15,9 +15,20 @@
 
     <div class="banner__info">
       <address class="banner__info-contact">
-        <a href="tel:{!! get_field('phone_inner', 'options') !!}" class="banner__info-contact_phone">
-          {!! get_field('phone_outer', 'options') !!}
-        </a>
+        <div class="banner__info-contact-item">
+          <a href="tel:{!! get_field('phone_inner', 'options') !!}" class="banner__info-contact_phone">
+            {!! get_field('phone_outer', 'options') !!}
+          </a>
+          <span class="banner__info-contact-item-title">Офис</span>
+        </div>
+        @if(get_field('phone_inner_add', 'options') && get_field('phone_outer_add', 'options'))
+        <div class="banner__info-contact-item">
+          <a href="tel:{!! get_field('phone_inner_add', 'options') !!}" class="banner__info-contact_phone">
+            {!! get_field('phone_outer_add', 'options') !!}
+          </a>
+          <span class="banner__info-contact-item-title">Лазерная резка</span>
+        </div>
+        @endif
       </address>
 
       <div class="banner__info-call-modal">Заказать звонок</div>

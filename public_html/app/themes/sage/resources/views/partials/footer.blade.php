@@ -26,6 +26,11 @@
       <a href="tel:{!! get_field('phone_inner', 'options') !!}" class="content-info__footer-contacts-item content-info__footer-contacts_phone">
         {!! get_field('phone_outer', 'options') !!}
       </a>
+      @if(get_field('phone_inner_add', 'options') && get_field('phone_outer_add', 'options'))
+      <a href="tel:{!! get_field('phone_inner_add', 'options') !!}" class="content-info__footer-contacts-item content-info__footer-contacts_phone">
+        {!! get_field('phone_outer_add', 'options') !!}
+      </a>
+      @endif
       <a href="mailto:{!! get_field('email', 'options') !!}" class="content-info__footer-contacts-item content-info__footer-contacts_email">
         {!! get_field('email', 'options') !!}
       </a>

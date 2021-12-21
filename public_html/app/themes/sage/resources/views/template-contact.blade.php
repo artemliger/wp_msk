@@ -21,6 +21,14 @@
               {!! get_field('address', 'options') !!}
             </a>
           </div>
+          @if(get_field('address_product', 'options') || get_field('address_link_product', 'options'))
+            <div class="contact-page__info-content-main contact-page__info-content-main-address">
+              <div class="contact-page__info-content-main-title">Адрес производства:</div>
+              <a href="{!! get_field('address_link_product', 'options') !!}" class="contact-page__info-content-main-link" target="_blank">
+                {!! get_field('address_product', 'options') !!}
+              </a>
+            </div>
+          @endif
           <div class="contact-page__info-content-main contact-page__info-content-main-phones">
             <div class="contact-page__info-content-main-title">Офис:</div>
             <div class="contact-page__info-content-main-phones-wrapper">
@@ -32,6 +40,16 @@
               @endphp
               <a href="tel:{!! $phoneNumb4 !!}" class="contact-page__info-content-main-phone">{!! $phone4 !!}</a>
               <a href="tel:{!! $phoneNumb5 !!}" class="contact-page__info-content-main-phone">{!! $phone5 !!}</a>
+            </div>
+          </div>
+          <div class="contact-page__info-content-main contact-page__info-content-main-phones">
+            <div class="contact-page__info-content-main-title">Лазерная резка:</div>
+            <div class="contact-page__info-content-main-phones-wrapper">
+              @php
+                $phone6 = "+7 (985) 056-68-64";
+                $phoneNumb6 = str_replace(array(' ', '(', ')', '-'), '', $phone6);
+              @endphp
+              <a href="tel:{!! $phoneNumb6 !!}" class="contact-page__info-content-main-phone">{!! $phone6 !!}</a>
             </div>
           </div>
           <div class="contact-page__info-content-main contact-page__info-content-main-mail">
